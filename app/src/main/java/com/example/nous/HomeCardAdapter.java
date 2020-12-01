@@ -1,6 +1,8 @@
 package com.example.nous;
 
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +71,8 @@ public class HomeCardAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,"clicked",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context,AnimalSkillsActivity.class);
+                context.startActivity(intent);
             }
         });
 
