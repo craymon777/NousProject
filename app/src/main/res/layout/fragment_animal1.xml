@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#393838"
     tools:context=".Animal1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,8 +12,11 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
@@ -23,14 +27,14 @@
             android:background="#13C1B1"
             android:text="SELECT TREES"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
             android:id="@+id/view"
             android:layout_width="wrap_content"
             android:layout_height="180dp"
-            android:background="@drawable/bg_ocean" />
+            android:background="#403F3F" />
 
 
     </LinearLayout>
@@ -38,17 +42,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="272dp"
-            android:layout_height="136dp"
+            android:layout_width="321dp"
+            android:layout_height="174dp"
             android:src="@drawable/ic_island"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,11 +60,12 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="#0A1D8A"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:background="@drawable/trees_button"
             android:text="Ocean"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -69,179 +73,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAnimal1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="115dp"
-                android:layout_height="115dp"
-                app:cardBackgroundColor="#656464"
-                app:cardCornerRadius="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_tiger"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="5dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stage 1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="115dp"
-                android:layout_height="115dp"
-                app:cardBackgroundColor="#656464"
-                app:cardCornerRadius="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_tiger"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="5dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stage 1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="115dp"
-                android:layout_height="115dp"
-                app:cardBackgroundColor="#656464"
-                app:cardCornerRadius="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_tiger"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="5dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stage 1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="115dp"
-                android:layout_height="115dp"
-                app:cardBackgroundColor="#656464"
-                app:cardCornerRadius="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_tiger"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="5dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stage 1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout6"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="115dp"
-                android:layout_height="115dp"
-                app:cardBackgroundColor="#656464"
-                app:cardCornerRadius="50dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_tiger"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="5dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stage 1" />
-        </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
