@@ -1,13 +1,26 @@
 package com.example.nous;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    private Button signOut;
+    private FirebaseAuth.AuthStateListener authListener;
+    private FirebaseAuth auth;
 
     private ViewPager vpTest;
 
@@ -19,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        auth = FirebaseAuth.getInstance();
+
+        signOut = (Button) findViewById(R.id.button2);
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
+
+
         vpTest = findViewById(R.id.vpTest);
     }
+
+
 }
