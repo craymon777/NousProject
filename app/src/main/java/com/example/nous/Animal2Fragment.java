@@ -78,6 +78,7 @@ public class Animal2Fragment extends Fragment implements StageAdapter.OnStageLis
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         recyclerView = view.findViewById(R.id.recyclerAnimal2);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2,
                 GridLayoutManager.VERTICAL, false);
@@ -97,23 +98,23 @@ public class Animal2Fragment extends Fragment implements StageAdapter.OnStageLis
 
         arrayList.add(new StageModel(
                 "Stage 1",
-                R.drawable.ic_tiger));
+                R.drawable.ic_sky1));
 
         arrayList.add(new StageModel(
                 "Stage 2",
-                R.drawable.ic_tiger));
+                R.drawable.ic_sky2));
 
         arrayList.add(new StageModel(
                 "Stage 3",
-                R.drawable.ic_tiger));
+                R.drawable.ic_sky3));
 
         arrayList.add(new StageModel(
                 "Stage 4",
-                R.drawable.ic_tiger));
+                R.drawable.ic_sky4));
 
         arrayList.add(new StageModel(
                 "Stage 5",
-                R.drawable.ic_tiger));
+                R.drawable.ic_sky5));
 
 
 

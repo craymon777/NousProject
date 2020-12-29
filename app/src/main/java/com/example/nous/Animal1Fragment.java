@@ -24,6 +24,8 @@ import java.util.ArrayList;
  * Use the {@link Animal1Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+
 public class Animal1Fragment extends Fragment implements StageAdapter.OnStageListener {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -44,15 +46,7 @@ public class Animal1Fragment extends Fragment implements StageAdapter.OnStageLis
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Animal1Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static Animal1Fragment newInstance(String param1, String param2) {
         Animal1Fragment fragment = new Animal1Fragment();
         Bundle args = new Bundle();
@@ -88,6 +82,7 @@ public class Animal1Fragment extends Fragment implements StageAdapter.OnStageLis
 
         //set up recycleView
         recyclerView = view.findViewById(R.id.recyclerAnimal1);
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2,
                 GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -112,23 +107,23 @@ public class Animal1Fragment extends Fragment implements StageAdapter.OnStageLis
 
         arrayList.add(new StageModel(
                 "Stage 1",
-                R.drawable.ic_tiger));
+                R.drawable.ic_ocean1));
 
         arrayList.add(new StageModel(
                 "Stage 2",
-                R.drawable.ic_tiger));
+                R.drawable.ic_ocean2));
 
         arrayList.add(new StageModel(
                 "Stage 3",
-                R.drawable.ic_tiger));
+                R.drawable.ic_ocean3));
 
         arrayList.add(new StageModel(
                 "Stage 4",
-                R.drawable.ic_tiger));
+                R.drawable.ic_ocean4));
 
         arrayList.add(new StageModel(
                 "Stage 5",
-                R.drawable.ic_tiger));
+                R.drawable.ic_ocean5));
 
 
 
@@ -140,12 +135,14 @@ public class Animal1Fragment extends Fragment implements StageAdapter.OnStageLis
     public void onStageClick(int position) {
 
         Intent intent;
+        String skill = "animal";
+        int tree = 1;
 
-        if (position == 0)
-        {
-            intent = new Intent(this.getContext(), Animal1Stage1Activity.class);
-            startActivity(intent);
-        }
+        intent = new Intent(this.getContext(), LearningAnimalActivity.class);
+        intent.putExtra("skill", skill);
+        intent.putExtra("tree", tree);
+        intent.putExtra("stage",position+1);
+        startActivity(intent);
 
     }
 }

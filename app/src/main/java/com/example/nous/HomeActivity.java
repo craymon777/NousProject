@@ -3,7 +3,9 @@ package com.example.nous;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
@@ -89,5 +91,11 @@ public class HomeActivity extends AppCompatActivity {
         viewPager.setAdapter(homeCardAdapter);
 
         viewPager.setPadding(125,0,155,0);
+    }
+
+    public void navigateToForum(View view)
+    {
+        Intent intent = new Intent(this, ForumActivity.class);
+        startActivity(intent);
     }
 }

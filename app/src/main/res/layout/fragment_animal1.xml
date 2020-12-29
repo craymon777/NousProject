@@ -25,6 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#13C1B1"
+            android:fontFamily="@font/amaranth"
+            android:padding="8dp"
             android:text="SELECT TREES"
             android:textAlignment="center"
             android:textColor="@color/black"

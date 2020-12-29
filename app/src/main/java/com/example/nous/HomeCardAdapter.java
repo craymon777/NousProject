@@ -70,9 +70,30 @@ public class HomeCardAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"clicked",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(context,AnimalSkillsActivity.class);
-                context.startActivity(intent);
+                Toast.makeText(context,"" + position,Toast.LENGTH_LONG).show();
+                Intent intent;
+
+                if (position == 0)
+                {
+
+                }
+                else if (position == 1)
+                {
+                    intent = new Intent(context, AnimalSkillsActivity.class);
+                    context.startActivity(intent);
+                }
+                else if (position == 2)
+                {
+                    intent = new Intent(context, ScienceSkillActivity.class);
+                    context.startActivity(intent);
+                }
+                else if (position == 3)
+                {
+                    intent = new Intent(context, HistorySkillActivity.class);
+                    context.startActivity(intent);
+                }
+
+
             }
         });
 

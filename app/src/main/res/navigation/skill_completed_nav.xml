@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/animal1_stage1_nav"
+    app:startDestination="@id/scoreFragment">
+
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.nous.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/navToBadge"
+            app:destination="@id/badgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/badgeFragment"
+        android:name="com.example.nous.BadgeFragment"
+        android:label="fragment_badge"
+        tools:layout="@layout/fragment_badge" >
+        <action
+            android:id="@+id/action_badgeFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+</navigation>
