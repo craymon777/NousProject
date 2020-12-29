@@ -52,7 +52,7 @@
             android:id="@+id/imageView4"
             android:layout_width="321dp"
             android:layout_height="174dp"
-            android:src="@drawable/ic_art_history"
+            android:src="@drawable/ic_human_body"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
