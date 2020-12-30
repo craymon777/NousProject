@@ -16,7 +16,11 @@
         <activity android:name=".Animal1Stage1Activity" />
         <activity android:name=".LearningAnimalActivity" />
         <activity android:name=".AnimalSkillsActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".RankingActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BadgesActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +28,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

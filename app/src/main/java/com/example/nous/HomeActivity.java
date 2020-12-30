@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
@@ -15,6 +16,9 @@ public class HomeActivity extends AppCompatActivity {
     ProgressBar expBar;
 
     private ViewPager viewPager;
+    private ImageView lBoard_btn;
+    private ImageView badges_btn;
+    private ImageView profile_btn;
 
     private ArrayList<HomeCardModel> modelArrayList;
     private HomeCardAdapter homeCardAdapter;
@@ -26,8 +30,42 @@ public class HomeActivity extends AppCompatActivity {
 
         setExpBar();
 
+        lBoard_btn = findViewById(R.id.imgLeaderboard);
+        lBoard_btn.setClickable(true);
+
+        badges_btn = findViewById(R.id.imgBadge);
+        badges_btn.setClickable(true);
+
+        profile_btn = findViewById(R.id.imgProfile);
+        profile_btn.setClickable(true);
+
+
         viewPager = findViewById(R.id.viewPagerHome);
         loadCards();
+
+        lBoard_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, RankingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        badges_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, BadgesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        profile_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         //viewPager on change listener

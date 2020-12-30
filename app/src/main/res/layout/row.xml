@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/badge_cardView"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgBadge"
+            android:src="@drawable/ic_badge">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/badgeName"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:text="Badge 1"
+            android:layout_toRightOf="@id/imgBadge"
+            android:layout_toEndOf="@id/imgBadge"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/badgeDesc"
+            android:textSize="14sp"
+            android:textColor="#a9a9a9"
+            android:text="This badge is obtained by completed a stage."
+            android:layout_toRightOf="@id/imgBadge"
+            android:layout_toEndOf="@id/imgBadge"
+            android:layout_below="@+id/badgeName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp">
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
