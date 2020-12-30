@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1059794292848",
+    "firebase_url": "https://nous-7bc0d-default-rtdb.firebaseio.com",
+    "project_id": "nous-7bc0d",
+    "storage_bucket": "nous-7bc0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059794292848:android:a9782f2ebb6aaa3c7ea4b5",
+        "android_client_info": {
+          "package_name": "com.example.nous"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059794292848-47u22689hnkbuddjt0s0gk56ojnkmcsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm3coqU9cxx_a1ugS94DeldPLwWOAPlrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059794292848-47u22689hnkbuddjt0s0gk56ojnkmcsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
