@@ -3,7 +3,10 @@ package com.example.nous;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
@@ -26,7 +29,6 @@ public class HomeActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.viewPagerHome);
         loadCards();
-
 
         //viewPager on change listener
         /*viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
