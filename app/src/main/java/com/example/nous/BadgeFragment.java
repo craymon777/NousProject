@@ -12,11 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BadgeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class BadgeFragment extends Fragment {
 
 
@@ -24,15 +19,7 @@ public class BadgeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BadgeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static BadgeFragment newInstance(String param1, String param2) {
         BadgeFragment fragment = new BadgeFragment();
         Bundle args = new Bundle();
@@ -69,8 +56,20 @@ public class BadgeFragment extends Fragment {
         return view;
     }
 
+    String skill;
+    int tree;
+    int stage;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //the information here is used to check which stage is done
+        //skill is "animal", "science" and "history".
+        //tree is 1 or 2
+        //stage is 1 to 5
+        skill = getActivity().getIntent().getStringExtra("skill");
+        tree = getActivity().getIntent().getIntExtra("tree",0);
+        stage = getActivity().getIntent().getIntExtra("stage",0);
     }
 }

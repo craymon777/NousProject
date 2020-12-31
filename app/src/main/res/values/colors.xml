@@ -8,5 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#00cba9</color>
-    <color name="colorPrimaryVariant">#06AE92</color>
+    <color name="colorPrimaryVariant">#00cba9</color>
 </resources>

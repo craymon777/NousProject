@@ -15,9 +15,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostModelHolder> {
     Context context;
     ArrayList<PostModel> modelArrayList;
 
-    public PostAdapter(Context context, ArrayList<PostModel> modelArrayList) {
+    private OnPostListener onPostListener;
+
+    public PostAdapter(Context context, ArrayList<PostModel> modelArrayList, OnPostListener onPostListener) {
         this.context = context;
         this.modelArrayList = modelArrayList;
+        this.onPostListener = onPostListener;
     }
 
     @NonNull
@@ -25,7 +28,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostModelHolder> {
     public PostModelHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.forum_post, parent, false);
 
-        return new PostModelHolder(view);
+        return new PostModelHolder(view, onPostListener);
     }
 
     @Override
@@ -34,6 +37,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostModelHolder> {
         //set data
         holder.tvPostTitle.setText(modelArrayList.get(position).getPostTitle());
         holder.tvPostDate.setText(modelArrayList.get(position).getPostDate());
+        holder.tvUser.setText(modelArrayList.get(position).getPostUser());
         holder.ivPostImg.setImageResource(modelArrayList.get(position).getPostImg());
 
     }
@@ -41,5 +45,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostModelHolder> {
     @Override
     public int getItemCount() {
         return modelArrayList.size();
+    }
+
+    public interface OnPostListener{
+        void onPostClick(int position);
     }
 }

@@ -28,6 +28,10 @@ public class Animal1Stage1Activity extends AppCompatActivity {
 
     FirebaseFirestore database;
 
+    String skill;
+    int tree;
+    int stage;
+
     ProgressBar questProgress;
 
     //timer and freezer
@@ -127,9 +131,9 @@ public class Animal1Stage1Activity extends AppCompatActivity {
 
     private void populateQuestions() {
 
-        String skill = getIntent().getStringExtra("skill");
-        int tree = getIntent().getIntExtra("tree",0);
-        int stage = getIntent().getIntExtra("stage",0);
+        skill = getIntent().getStringExtra("skill");
+        tree = getIntent().getIntExtra("tree",0);
+        stage = getIntent().getIntExtra("stage",0);
 
         if (skill.equals("animal") && tree == 1 && stage == 1)
         {
@@ -235,7 +239,1477 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     R.drawable.whale));
             tipsArray.add("Whale Shark");
         }
+        else if (skill.equals("animal") && tree == 1 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
 
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("animal") && tree == 1 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("animal") && tree == 1 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("animal") && tree == 2 && stage == 1)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("animal") && tree == 2 && stage == 2)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("animal") && tree == 2 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("animal") && tree == 2 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("animal") && tree == 2 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("science") && tree == 1 && stage == 1)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("science") && tree == 1 && stage == 2)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("science") && tree == 1 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("science") && tree == 1 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("science") && tree == 1 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("science") && tree == 2 && stage == 1)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("science") && tree == 2 && stage == 2)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("science") && tree == 2 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("science") && tree == 2 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("science") && tree == 2 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("history") && tree == 1 && stage == 1)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("history") && tree == 1 && stage == 2)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("history") && tree == 1 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("history") && tree == 1 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("history") && tree == 1 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+        }
+        else if (skill.equals("history") && tree == 2 && stage == 1)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("history") && tree == 2 && stage == 2)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("history") && tree == 2 && stage == 3)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("history") && tree == 2 && stage == 4)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
+        else if (skill.equals("history") && tree == 2 && stage == 5)
+        {
+            questionsArray.add(new Question(
+                    "What is the percentage of salt water on Earth?",
+                    "1%",
+                    "50%",
+                    "72%",
+                    "27%",
+                    "72%",
+                    R.drawable.ic_earth));
+            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+
+            questionsArray.add(new Question(
+                    "How many years has been Jellyfish existed?",
+                    "1 year",
+                    "200 year",
+                    "650 year",
+                    "650 million year",
+                    "650 million year",
+                    R.drawable.ic_jellyfish));
+            tipsArray.add("650 million year");
+
+            questionsArray.add(new Question(
+                    "What is the color of octopus's blood?",
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Black",
+                    "Blue",
+                    R.drawable.ic_octopus));
+            tipsArray.add("Blue");
+
+            questionsArray.add(new Question(
+                    "How does dolphin stay away from threats when sleeping?",
+                    "Does not sleep",
+                    "Sleep with half of brain",
+                    "Look for Shelter",
+                    "Protected by human",
+                    "Sleep with half of brain",
+                    R.drawable.ic_dolphin));
+            tipsArray.add("Sleep with half of brain");
+
+            questionsArray.add(new Question(
+                    "What is the largest fish in ocean?",
+                    "Whale Shark",
+                    "Blue Whale",
+                    "Gold Fish",
+                    "Protected by human",
+                    "Whale Shark",
+                    R.drawable.whale));
+            tipsArray.add("Whale Shark");
+
+        }
         else
         {
             questionsArray.add(new Question(
@@ -246,6 +1720,33 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "jhin",
                     "Bee",
                     R.drawable.q_bird));
+
+            questionsArray.add(new Question(
+                    "Default",
+                    "Orstrict",
+                    "Bee Humingbird",
+                    "swallow",
+                    "eagle",
+                    "Orstrict",
+                    R.drawable.ic_tiger));
+
+            questionsArray.add(new Question(
+                    "Default",
+                    "Orstrict",
+                    "Bee Humingbird",
+                    "swallow",
+                    "eagle",
+                    "Orstrict",
+                    R.drawable.ic_tiger));
+
+            questionsArray.add(new Question(
+                    "Default",
+                    "Orstrict",
+                    "Bee Humingbird",
+                    "swallow",
+                    "eagle",
+                    "Orstrict",
+                    R.drawable.ic_tiger));
 
             questionsArray.add(new Question(
                     "Default",
@@ -501,6 +2002,9 @@ public class Animal1Stage1Activity extends AppCompatActivity {
         Intent intent = new Intent(this, SkillCompletedActivity.class);
         intent.putExtra("correct", numOfCorrectAns);
         intent.putExtra("totalQuestion", questionsArray.size());
+        intent.putExtra("skill", skill);
+        intent.putExtra("tree", tree);
+        intent.putExtra("stage", stage);
         startActivity(intent);
         finish();
     }

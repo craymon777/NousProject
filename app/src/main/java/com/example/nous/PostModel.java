@@ -1,7 +1,8 @@
 package com.example.nous;
 
 public class PostModel {
-    private String postTitle, postDate;
+    private String postTitle, postDate, postUser;
+
     private int postImg;
 
     public String getPostTitle() {
@@ -18,6 +19,14 @@ public class PostModel {
 
     public void setPostDate(String postDate) {
         this.postDate = postDate;
+    }
+
+    public String getPostUser() {
+        return postUser;
+    }
+
+    public void setPostUser(String postUser) {
+        this.postUser = postUser;
     }
 
     public int getPostImg() {

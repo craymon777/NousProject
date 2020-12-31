@@ -1,5 +1,6 @@
 package com.example.nous;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -97,6 +98,14 @@ public class Science2Fragment extends Fragment implements StageAdapter.OnStageLi
 
     @Override
     public void onStageClick(int position) {
+        Intent intent;
+        String skill = "science";
+        int tree = 2;
 
+        intent = new Intent(this.getContext(), LearningAnimalActivity.class);
+        intent.putExtra("skill", skill);
+        intent.putExtra("tree", tree);
+        intent.putExtra("stage",position+1);
+        startActivity(intent);
     }
 }
