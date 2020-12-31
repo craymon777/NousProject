@@ -47,6 +47,14 @@ public class RankingActivity extends AppCompatActivity {
             }
         });
 
+        forum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RankingActivity.this, ForumActivity.class);
+                startActivity(intent);
+            }
+        });
+
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

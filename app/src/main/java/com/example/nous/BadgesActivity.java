@@ -32,6 +32,14 @@ public class BadgesActivity extends AppCompatActivity {
         profile_btn = findViewById(R.id.profileTab);
         forum_btn = findViewById(R.id.forumTab);
 
+        forum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BadgesActivity.this, ForumActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ranking_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

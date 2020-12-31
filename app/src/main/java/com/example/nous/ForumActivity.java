@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.common.base.MoreObjects;
@@ -18,10 +20,44 @@ public class ForumActivity extends AppCompatActivity implements PostAdapter.OnPo
     RecyclerView recyclerView;
     PostAdapter postAdapter;
 
+    ImageView back_btn;
+    TextView badges_button, forum_btn, profile_btn, ranking_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forum);
+
+        back_btn = findViewById(R.id.back);
+        badges_button = findViewById(R.id.badgesTab);
+        ranking_btn = findViewById(R.id.rankingTab);
+        profile_btn = findViewById(R.id.profileTab);
+        forum_btn = findViewById(R.id.forumTab);
+
+        badges_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForumActivity.this, BadgesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ranking_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForumActivity.this, RankingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForumActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         recyclerView = findViewById(R.id.recyclerPost);
 

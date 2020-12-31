@@ -29,6 +29,8 @@ public class PostActivity extends AppCompatActivity {
         tvPostDate = findViewById(R.id.tvPostDate);
         tvUser = findViewById(R.id.tvUser);
 
+        //set content
+
         recyclerView = findViewById(R.id.recyclerComment);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
