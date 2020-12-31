@@ -58,6 +58,8 @@ public class RankingActivity extends AppCompatActivity {
         List<Fragment> list = new ArrayList();
         list.add(new RankingFragment());
         list.add(new masterboardFragment());
+        list.add(new HistoryMasterboardFragment());
+        list.add(new ScienceMasterboardFragment());
 
         pager = findViewById(R.id.rankingPager);
         pagerAdapter = new RankingPageAdapter(getSupportFragmentManager(), list);
