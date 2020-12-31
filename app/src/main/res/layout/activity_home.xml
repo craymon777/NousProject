@@ -205,7 +205,6 @@
                         android:layout_height="match_parent"
                         android:padding="10dp">
 
-
                         <ImageView
                             android:id="@+id/imgProfile"
                             android:layout_width="60dp"
