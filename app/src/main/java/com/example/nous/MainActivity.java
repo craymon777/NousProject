@@ -18,10 +18,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button signOut;
-    private FirebaseAuth.AuthStateListener authListener;
-    private FirebaseAuth auth;
-
     private ViewPager vpTest;
 
     private ArrayList<HomeCardModel> modelArrayList;
@@ -31,18 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        auth = FirebaseAuth.getInstance();
-
-        signOut = (Button) findViewById(R.id.button2);
-
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                auth.signOut();
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
 
 
         vpTest = findViewById(R.id.vpTest);
