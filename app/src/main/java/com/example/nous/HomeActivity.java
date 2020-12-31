@@ -7,11 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.ProgressBar;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private Button btnLogout;
+    private FirebaseAuth.AuthStateListener authListener;
+    private FirebaseAuth auth;
 
     ProgressBar expBar;
 
@@ -27,6 +34,20 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        //---------log out section-----------
+        auth = FirebaseAuth.getInstance();
+
+        btnLogout = (Button) findViewById(R.id.btnLogout);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+            }
+        });
+        //---------log out section-----------
 
         setExpBar();
 
