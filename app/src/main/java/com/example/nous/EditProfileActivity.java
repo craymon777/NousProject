@@ -82,8 +82,14 @@ public class EditProfileActivity extends AppCompatActivity {
                 phone.setText(currentUser.getPhone());
                 email = currentUser.getEmail();
                 profileURL = currentUser.getProfilePictureUrl();
-
-                Glide.with(EditProfileActivity.this).load(profileURL.toString()).into(profilePicture);
+                if(profileURL.isEmpty())
+                {
+                    Glide.with(EditProfileActivity.this).load(R.drawable.ic_explorer).into(profilePicture);
+                }
+                else
+                {
+                    Glide.with(EditProfileActivity.this).load(profileURL).into(profilePicture);
+                }
             }
 
             @Override
@@ -110,67 +116,6 @@ public class EditProfileActivity extends AppCompatActivity {
                     startActivity(firebaseUserIntent);
                     finish();
                 } else {
-                    StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("UserProfileImage");
-                    final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
-                    imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    String imageDownlaodLink = uri.toString();
-                                    reference.child("name").setValue(sName);
-                                    reference.child(("phone")).setValue(sPhone);
-                                    reference.child("profilePictureUrl").setValue(imageDownlaodLink);
-                                    Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
-                                    startActivity(intent);
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                }
-                            });
-                        }
-                    });
-                }
-            }
-        });
-    }
-    private void checkAndRequestForPermission() {
-        if (ContextCompat.checkSelfPermission(EditProfileActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(EditProfileActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                Toast.makeText(EditProfileActivity.this,"Please accept for required permission",Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                ActivityCompat.requestPermissions(EditProfileActivity.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PReqCode);
-            }
-        }
-        else
-            openGallery();
-    }
-
-    private void openGallery() {
-        //TODO: open gallery intent and wait for user to pick an image !
-        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent,REQUESCODE);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK && requestCode == REQUESCODE && data != null ) {
-
-            // the user has successfully picked an image
-            // we need to save its reference to a Uri variable
-            pickedImgUri = data.getData() ;
-            profilePicture.setImageURI(pickedImgUri);
-        }
                     StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("UserProfileImage");
                     final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
                     imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
