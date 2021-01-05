@@ -93,6 +93,7 @@ public class masterboardFragment extends Fragment {
 
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User");
+        reference.orderByChild("animalMasteryPoint").limitToLast(100);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

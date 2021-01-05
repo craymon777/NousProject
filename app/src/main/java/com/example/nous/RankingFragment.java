@@ -69,6 +69,7 @@ public class RankingFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User");
+        reference.orderByChild("experientPoint").limitToLast(100);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
