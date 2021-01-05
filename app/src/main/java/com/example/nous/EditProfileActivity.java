@@ -116,28 +116,31 @@ public class EditProfileActivity extends AppCompatActivity {
                     startActivity(firebaseUserIntent);
                     finish();
                 } else {
+                    reference.child("name").setValue(sName);
+                    reference.child(("phone")).setValue(sPhone);
                     StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("UserProfileImage");
-                    final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
-                    imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    String imageDownlaodLink = uri.toString();
-                                    reference.child("name").setValue(sName);
-                                    reference.child(("phone")).setValue(sPhone);
-                                    reference.child("profilePictureUrl").setValue(imageDownlaodLink);
-                                    Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
-                                    startActivity(intent);
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                }
-                            });
-                        }
-                    });
+                    if(pickedImgUri != null)
+                    {
+                        final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
+                        imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+                                        String imageDownlaodLink = uri.toString();
+                                        reference.child("profilePictureUrl").setValue(imageDownlaodLink);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                 }
             }
         });
