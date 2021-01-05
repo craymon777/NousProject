@@ -55,7 +55,9 @@ public class HomeActivity extends AppCompatActivity {
         userLevel = findViewById(R.id.tvUserLevel);
         profile_pic = findViewById(R.id.ProfilePicture);
         tvExperience = findViewById(R.id.tvExperience);
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        DatabaseReference reference =
+                FirebaseDatabase.getInstance().getReference().child("User")
+                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

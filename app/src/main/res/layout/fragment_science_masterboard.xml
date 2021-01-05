@@ -9,6 +9,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textColor="@color/black"
         android:text="Science Mastery Leaderboard"
         android:background="@drawable/image_overlay"
         android:gravity="center"
@@ -16,7 +17,6 @@
         android:textStyle="bold"/>
 
     <TableLayout
-        android:background="@drawable/rounded_corner"
         android:layout_margin="60dp"
         android:layout_width="380dp"
         android:layout_gravity="center"
@@ -28,11 +28,20 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:layout_width="58dp"
+                android:layout_column="1"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="Ranking"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:layout_column="1"
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="Username"
-                android:textSize="16dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -40,15 +49,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Mastery Point"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_column="1"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Ranking"
-                android:textSize="16dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
         </TableRow>
 

@@ -103,7 +103,9 @@ public class ScoreFragment extends Fragment {
         tree = getActivity().getIntent().getIntExtra("tree",0);
         stage = getActivity().getIntent().getIntExtra("stage",0);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        DatabaseReference reference
+                = FirebaseDatabase.getInstance().getReference()
+                .child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
