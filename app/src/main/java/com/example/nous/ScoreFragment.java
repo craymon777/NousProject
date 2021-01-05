@@ -145,25 +145,28 @@ public class ScoreFragment extends Fragment {
                     if(skill.equals("animal") && currentUser.getBadgeCompletedCounter().get("badge1")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge1").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
                     else if(skill.equals("science") && currentUser.getBadgeCompletedCounter().get("badge2")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge2").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
                     else if(skill.equals("history") && currentUser.getBadgeCompletedCounter().get("badge3")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge3").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
                     else if(currentUser.getBadgeCompletedCounter().get("badge4")==0 && currentUser.getBadgeCompletedCounter().get("badge1")==1 && currentUser.getBadgeCompletedCounter().get("badge2")==1 && currentUser.getBadgeCompletedCounter().get("badge3")==1)
                     {
                         reference.child("badgeCompletedCounter").child("badge4").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
                     else
                     {
                         Intent intent = new Intent(getActivity(), HomeActivity.class);
                         startActivity(intent);
                     }
-                    Navigation.findNavController(view).navigate(R.id.navToBadge);
                 }
                 else
                 {

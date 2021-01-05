@@ -92,7 +92,7 @@ public class HistoryMasterboardFragment extends Fragment {
                 {
                     historyMasterboardArrayList.add(new Ranking(
                             dataSnapshot.child("name").getValue(String.class),
-                            dataSnapshot.child("historyMasteryPoint").getValue(Integer.class),
+                            dataSnapshot.child("historyMasteryPoint").getValue(Integer  .class),
                             historyMasterboardArrayList.size()+1));
                     Collections.sort(historyMasterboardArrayList);
                     int counter = 1;
