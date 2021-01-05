@@ -4,18 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="66dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_nous" />
 
     <Button
         android:id="@+id/buttonregister2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="73dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
         android:text="New member? Register now!"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonconfirm" />
 
@@ -23,15 +34,16 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="56dp"
+        android:drawableLeft="@drawable/ic_person"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <EditText
         android:id="@+id/password"
@@ -40,8 +52,11 @@
         android:layout_marginStart="101dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="100dp"
+        android:drawableLeft="@drawable/ic_password"
         android:ems="10"
-        android:hint="password"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,27 +64,27 @@
 
     <Button
         android:id="@+id/buttonconfirm"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="162dp"
+        android:layout_width="318dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/login_button"
         android:text="Login"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/buttonforgotpass2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="111dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
         android:text="Forgot password?"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonregister2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

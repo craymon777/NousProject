@@ -86,6 +86,8 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.navToBadge);
+
+                //return to Homeactivity
             }
         });
     }

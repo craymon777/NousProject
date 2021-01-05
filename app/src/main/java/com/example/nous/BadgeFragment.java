@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class BadgeFragment extends Fragment {
 
@@ -60,6 +61,8 @@ public class BadgeFragment extends Fragment {
     int tree;
     int stage;
 
+    ImageView ivBadgeObtain;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -71,5 +74,9 @@ public class BadgeFragment extends Fragment {
         skill = getActivity().getIntent().getStringExtra("skill");
         tree = getActivity().getIntent().getIntExtra("tree",0);
         stage = getActivity().getIntent().getIntExtra("stage",0);
+
+
+        //badge icon
+        ivBadgeObtain = view.findViewById(R.id.ivBadgeObtain);
     }
 }

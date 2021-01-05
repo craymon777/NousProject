@@ -187,141 +187,142 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     R.drawable.whale));
             tipsArray.add("Whale Shark");
         }
+
         else if (skill.equals("animal") && tree == 1 && stage == 2)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "What will an angelfish do when its partner dies?",
+                    "Wont breed with another mate",
+                    "Find another mate",
+                    "Pray for it",
+                    "None of above",
+                    "Wont breed with another mate",
+                    R.drawable.ic_angelfish));
+            tipsArray.add("When angelfish choose a partner, it’s for life! If one of them dies, the other one won’t breed with any other mate in their entire lifetime.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the weight of Blue Whale’s tongue?",
+                    "10 kg",
+                    "1000 kg",
+                    "7000 kg",
+                    "700 kg",
+                    "7000 kg",
+                    R.drawable.ic_bluewhale));
+            tipsArray.add("Its tongue can weigh more than an entire elephant- that means that it can be heavier than 7,000 kilograms!");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What will shark do when it lose a tooth?",
+                    "It will grow back",
+                    "It will find a replacement",
+                    "It cannot bite anymore",
+                    "It lost forever",
+                    "It will grow back",
+                    R.drawable.ic_shark));
+            tipsArray.add("Shark teeth are not really teeth, but scales. Because of this, if they ever lose a tooth, it will just grow back.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What is the length of smallest whale?",
+                    "100 feet",
+                    "1 feet",
+                    "20 feet",
+                    "5 feet",
+                    "5 feet",
+                    R.drawable.ic_smallwhale));
+            tipsArray.add("The Harbor Porpoise is one of the smallest at ~5 feet when grown up.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
+                    "What is the only species with male take care of young?",
                     "Whale Shark",
                     "Blue Whale",
+                    "Seahorse",
                     "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "Seahorse",
+                    R.drawable.ic_takecare));
+            tipsArray.add("Seahorses are among the only species in which the male gives birth and takes care of the young.");
         }
         else if (skill.equals("animal") && tree == 1 && stage == 3)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "What will Titan Triggerfish do with divers?",
+                    "Play with human",
+                    "Bite through divers' fins and flesh",
+                    "Run away from divers",
+                    "Do not do anything",
+                    "Bite through divers' fins and flesh",
+                    R.drawable.ic_triggerfish));
+            tipsArray.add("Titan Triggerfish will bite through divers' fins and flesh, and often even when they haven't been provoked.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What does tentacle of Flower Urchin contain",
+                    "Poison",
+                    "Flower",
+                    "Food",
+                    "Sea Water",
+                    "Poison",
+                    R.drawable.ic_urchin));
+            tipsArray.add("Don't let this sea urchin's beauty fool you. Its tentacle with a little jaw can inject toxic venoms and potentially kill you.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "How many electrolytes in an Electric Eel?",
+                    "50",
+                    "600",
+                    "6000",
+                    "600000",
+                    "6000",
+                    R.drawable.ic_eel));
+            tipsArray.add("Its body contains organs filled with nearly 6,000 electrolytes that will discharge volts of electricity and shock the intruder");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "How many human can a Blue-Ringed Octopus kill instantly?",
+                    "1",
+                    "0",
+                    "62",
+                    "26",
+                    "26",
+                    R.drawable.ic_blueoctopus));
+            tipsArray.add("Blue-Ringed Octopus has venom 1,000 times more powerful than cyanide, it can kill 26 humans in just minutes.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "How many times a Pufferfish more poisonous than cyanide?",
+                    "12",
+                    "120",
+                    "1200",
+                    "12000",
+                    "1200",
+                    R.drawable.ic_pufferfish));
+            tipsArray.add("Pufferfish, or blowfish, possess venom that's 1,200 times more poisonous than cyanide.");
         }
         else if (skill.equals("animal") && tree == 1 && stage == 4)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "Where will Sea Turtles lay their eggs?",
+                    "South Beach",
+                    "North beach",
+                    "Any beach",
+                    "Same beach used by their mothers",
+                    "Same beach used by their mothers",
+                    R.drawable.ic_seaturtle));
+            tipsArray.add("Sea turtles usually return to same beach used by their mothers to lay their eggs.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the nickname for Beluga Whales?",
+                    "Baby of the sea",
+                    "Canaries of the sea",
+                    "Adult of the sea",
+                    "Music of the sea",
+                    "Canaries of the sea",
+                    R.drawable.ic_smallwhale));
+            tipsArray.add("Beluga whales have an adorable language of chirps and squeaks that have earned them the nickname \"canaries of the sea.\"");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What do Sea Sponges missing?",
+                    "Head",
+                    "Mouth",
+                    "Eyes",
+                    "All of above",
+                    "All of above",
+                    R.drawable.ic_bluewhale));
+            tipsArray.add("At 188 decibels, the calls of blue whales is the loudest sound made by any animal on the planet.");
 
             questionsArray.add(new Question(
                     "How does dolphin stay away from threats when sleeping?",
@@ -330,595 +331,596 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "Look for Shelter",
                     "Protected by human",
                     "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
+                    R.drawable.ic_seasponge));
             tipsArray.add("Sleep with half of brain");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What can an Oyster do?",
+                    "Do not need oxygen",
+                    "Eat infinitely",
+                    "Change from one gender to another",
+                    "Have two genders at same time",
+                    "Change from one gender to another",
+                    R.drawable.ic_oyster));
+            tipsArray.add("Oysters can change from one gender to another and back again depending on which is best for mating.");
         }
         else if (skill.equals("animal") && tree == 1 && stage == 5)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "Turtles do not live in which continent?",
+                    "Africa",
+                    "Americas",
+                    "Antarctica",
+                    "Australia",
+                    "Antarctica",
+                    R.drawable.ic_seaturtle));
+            tipsArray.add("Turtles live on every continent except Antarctica.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the oldest crab in the world?",
+                    "Japanese Spider Crab",
+                    "Americas Spider Crab",
+                    "Australia Spider Crab",
+                    "Africa Spider Crab",
+                    "Japanese Spider Crab",
+                    R.drawable.ic_crab));
+            tipsArray.add("The Japanese Spider Crab is the oldest crab of the world.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What is the deepest part of the ocean?",
+                    "Mountain Deep",
+                    "Challenger Deep",
+                    "Not that Deep",
+                    "Fighting Deep",
+                    "Challenger Deep",
+                    R.drawable.ic_deepsea));
+            tipsArray.add("The deepest part of the ocean is called Challenger Deep, and it is within the Mariana Trench, which have a depth of around 36,000 feet.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "How do Parasitic Isopods enter a fish?",
+                    "Through the gills",
+                    "Through the mouth",
+                    "Through the eyes",
+                    "Through the nose",
+                    "Through the gills",
+                    R.drawable.ic_parasite));
+            tipsArray.add("Some types of parasitic isopods can enter fish through the gills and attach themselves to the tongue.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What will Parasitic Isopods do to fish tongue?",
+                    "Clean the tongue",
+                    "Do nothing",
+                    "Cause it to fall off",
+                    "Bring nutrients",
+                    "Cause it to fall off",
+                    R.drawable.ic_parasite));
+            tipsArray.add("The parasite causes the tongue of the fish to fall off and then serves as tongue-replacement.");
         }
         else if (skill.equals("animal") && tree == 2 && stage == 1)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "What can Flying Squirrels do?",
+                    "Fly",
+                    "Glide",
+                    "Swim",
+                    "None of above",
+                    "Glide",
+                    R.drawable.ic_flyingsquirrel));
+            tipsArray.add("Although most animals (other than birds) don't actually fly, they glide, including Flying Squirrels.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the only Flying Mammal?",
+                    "Flying Squirrels",
+                    "Flying Fish",
+                    "Flying Lizards",
+                    "Flying Foxes",
+                    "Flying Foxes",
+                    R.drawable.ic_fly));
+            tipsArray.add("Flying foxes are actually fruit bats, and yes, they can fly. Bats are the only mammal that can do so.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What is the fastest flying speed of bat?",
+                    "50mph",
+                    "1mph",
+                    "100mph",
+                    "10mph",
+                    "100mph",
+                    R.drawable.ic_bat));
+            tipsArray.add("How fast a bat flies depends on the species, but they can reach speeds over 100 miles per hour according to new research.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What is the world largest bat?",
+                    "Egyptian Fruit Bat",
+                    "Flying Foxes",
+                    "Honduran White Bat",
+                    "Hoary Bat",
+                    "Flying Foxes",
+                    R.drawable.ic_bat1));
+            tipsArray.add("The world’s largest bat is the flying fox that lives on islands in the South Pacific. It has a wingspan of up to 6 feet.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What is the world smallest bat?",
+                    "Egyptian Fruit Bat",
+                    "Honduran White Bat",
+                    "Bumble Bee Bat",
+                    "Hoary Bat",
+                    "Bumble Bee Bat",
+                    R.drawable.ic_bat2));
+            tipsArray.add("The world’s smallest bat is the bumble bee bat of Thailand, which is smaller than a thumbnail and weighs less than a penny.");
 
         }
         else if (skill.equals("animal") && tree == 2 && stage == 2)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "What is the smallest bird in the world?",
+                    "Parrots",
+                    "Bee Hummingbird",
+                    "Swallow",
+                    "Eagle",
+                    "Bee Hummingbird",
+                    R.drawable.ic_hummingbird));
+            tipsArray.add("The smallest bird is the bee hummingbird (Mellisuga helenae) of Cuba and the Isle of Youth. Males measure 57 mm (2.24 in) in total length.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the largest bird in the world?",
+                    "Ostrich",
+                    "Eagle",
+                    "Wandering Albatross",
+                    "Falcon",
+                    "Ostrich",
+                    R.drawable.ic_bigbird));
+            tipsArray.add("The common ostrich is the biggest bird in the world.It’s both the tallest and heaviest, with an average height of over 2 meters.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What is the slowest flying bird in the world?",
+                    "Wandering Albatross",
+                    "Falcon",
+                    "American Woodcock",
+                    "Swallow",
+                    "American Woodcock",
+                    R.drawable.ic_bigbird));
+            tipsArray.add("The American woodcock (Scolopax minor) and the Eurasian woodcock (S. Rusticola) have both been timed lying at 5 mph.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What is the fastest flying bird in the world?",
+                    "Ostrich",
+                    "Peregrine Falcon",
+                    "Wandering Albatross",
+                    "Eagle",
+                    "Peregrine Falcon",
+                    R.drawable.ic_bigbird));
+            tipsArray.add("The peregrine falcon (Falco peregrinus) is the fastest living creature, reaching speeds of at least 124 mph and possibly as much as 168.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What is the largest flying bird in the world?",
+                    "Peregrine Falcon",
+                    "Ostrich",
+                    "Eagle",
+                    "Wandering Albatross",
+                    "Wandering Albatross",
+                    R.drawable.ic_bigbird));
+            tipsArray.add("There are 23 species of albatrosses, though the largest is the Wandering Albatross. This bird has a 11-foot (3.4 meter) wingspan.");
 
         }
         else if (skill.equals("animal") && tree == 2 && stage == 3)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "How many species of bird in the world?",
+                    "950",
+                    "9,500",
+                    "5",
+                    "95",
+                    "9,500",
+                    R.drawable.ic_bird));
+            tipsArray.add("There are over 9,500 species of birds in the world. Scientists typically group them into 30 categories.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "Where does 2/3 of bird species found?",
+                    "Tropical Rain Forests",
+                    "Pond",
+                    "Dessert",
+                    "River Bank",
+                    "Tropical Rain Forests",
+                    R.drawable.ic_bird1));
+            tipsArray.add("Approximately 2/3 of all the bird species are found in tropical rain forests.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "How much do lungs of birds take up of their body?",
+                    "1/10",
+                    "1/2",
+                    "1/5",
+                    "1/3",
+                    "1/5",
+                    R.drawable.ic_bird2));
+            tipsArray.add("A bird’s lungs are much more complicated and efficient and take up more space than those of mammals, such as humans. A bird’s takes up 1/5.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What is the most talkative bird?",
+                    "Ostrich",
+                    "Swallow",
+                    "Eagle",
+                    "African Gray Parrot",
+                    "African Gray Parrot",
+                    R.drawable.ic_bird3));
+            tipsArray.add("The most talkative bird in the world is the African Gray Parrot. One parrot could say over 800 words.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "How long an Emu Chick take to hatch an egg?",
+                    "60 days",
+                    "6 days",
+                    "10 days",
+                    "100 days",
+                    "60 days",
+                    R.drawable.ic_egg));
+            tipsArray.add("Emu Chicks take 60 days to hatch. Small songbirds take just 2 weeks.");
 
         }
         else if (skill.equals("animal") && tree == 2 && stage == 4)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "How many feathers does Whistling Swan have?",
+                    "1",
+                    "25000",
+                    "250",
+                    "25",
+                    "25000",
+                    R.drawable.ic_swan));
+            tipsArray.add("The bird with the most feathers is the Whistling Swan, with up to 25,000 feathers.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "How many feathers do Hummingbirds have",
+                    "1000",
+                    "500000",
+                    "100000",
+                    "50",
+                    "1000",
+                    R.drawable.ic_hummingbird));
+            tipsArray.add("Hummingbirds are so small that they have fewer than 1,000.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
+                    "How fast can Gentoo Penguins swim?",
+                    "2 mph",
+                    "12 mph",
+                    "102 mph",
+                    "22 mph",
+                    "22 mph",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("Gentoo Penguins are the fastest swimming birds, reaching speeds of 22 mph (36 kph).");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "How long can a Wandering Albatross live?",
+                    "8 years",
+                    "800 years",
+                    "80 years",
+                    "1 year",
+                    "80 years",
+                    R.drawable.ic_albatross));
+            tipsArray.add("The larger the bird, the more likely it is to live longer. The large Wandering Albatross can live for up to 80 years.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "When will Emperor Penguin lay egg?",
+                    "Start of Winter",
+                    "Middle of Winter",
+                    "End of Winter",
+                    "Middle of Summer",
+                    "Middle of Winter",
+                    R.drawable.ic_penguin));
+            tipsArray.add("The Emperor Penguin is the only bird that lays its eggs in the middle of winter. By laying its eggs so early, it gives its young a head start.");
 
         }
         else if (skill.equals("animal") && tree == 2 && stage == 5)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "What do Oilbirds eat?",
+                    "Oil Palm Fruits",
+                    "Orange",
+                    "Apple",
+                    "Coconut",
+                    "Oil Palm Fruits",
+                    R.drawable.ic_bird1));
+            tipsArray.add("Oilbirds eat oil palm fruits, which make the birds oily too.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What will lighthouse cause to bird?",
+                    "Does not do anything",
+                    "Give signal",
+                    "Attract birds and kill them",
+                    "Show direction",
+                    "Attract birds and kill them",
+                    R.drawable.ic_lighthouse));
+            tipsArray.add("Lighthouses are dangerous for birds. The beams attract birds, many are killed when they fly into the glass.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "How many people in the team that develop Angry Bird?",
+                    "10",
+                    "40",
+                    "1",
+                    "4",
+                    "4",
+                    R.drawable.ic_angrybird));
+            tipsArray.add("The game Angry Birds has sold more than 7 million copies on Apple’s iPhone. The game was made by a team of just four people.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What can a pigeon do?",
+                    "Recognise Individual Human Faces",
+                    "Learn Words",
+                    "Both of Above",
+                    "None of Above",
+                    "Both of Above",
+                    R.drawable.ic_pigeon));
+            tipsArray.add("Pigeons Can Recognise Individual Human Faces And Learn Words.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What nutrition do birds contribute the most to human?",
+                    "Carbohydrate",
+                    "Protein",
+                    "Fats",
+                    "Calcium",
+                    "Protein",
+                    R.drawable.ic_nutrition));
+            tipsArray.add("Birds that are raised for meat and eggs (poultry) are the largest source of protein eaten by humans.");
 
         }
+
         else if (skill.equals("science") && tree == 1 && stage == 1)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "How many bones in adult human body?",
+                    "206",
+                    "250",
+                    "300",
+                    "200",
+                    "206",
+                    R.drawable.ic_skeleton));
+            tipsArray.add("Adults have 206 bones in their bodies.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "How many bones in baby human body?",
+                    "206",
+                    "250",
+                    "300",
+                    "200",
+                    "300",
+                    R.drawable.ic_xrays));
+            tipsArray.add("A baby is born with about 300 bones");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What is the longest bone in human body?",
+                    "Femur",
+                    "Scapula",
+                    "Ulna",
+                    "Humerus",
+                    "Femur",
+                    R.drawable.ic_bigbone));
+            tipsArray.add("The femur, which runs from your hip to your knee, is the longest and largest bone in your body.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "What is the smallest bone in human body?",
+                    "Stapes",
+                    "Scapula",
+                    "Ulna",
+                    "Humerus",
+                    "Stapes",
+                    R.drawable.ic_smallbones));
+            tipsArray.add("The stapes, a bone in your inner ear, is the smallest of all your bones.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What is the largest joint in human body?",
+                    "Wrist Joint",
+                    "Finger Joint",
+                    "Elbow Joint",
+                    "Knee Joint",
+                    "Knee Joint",
+                    R.drawable.ic_joint));
+            tipsArray.add("At the knee joint, three bones connect: your femur, tibia, and patella. Those three large bones require an equally large joint to connect them.");
         }
         else if (skill.equals("science") && tree == 1 && stage == 2)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
+                    "What is correct about hair?",
+                    "Second fastest growing tissue",
+                    "Strongest tissue",
+                    "Fastest Growing tissue",
+                    "None of above",
+                    "Second fastest growing tissue",
+                    R.drawable.ic_hair));
+            tipsArray.add("Hair is the second fastest growing tissue in the body after bone marrow.");
+
+            questionsArray.add(new Question(
+                    "How many layers does skin have?",
+                    "4",
+                    "3",
+                    "1",
+                    "2",
+                    "3",
+                    R.drawable.ic_skin));
+            tipsArray.add("Skin is considered an organ in its own right. It's comprised of three layers. ");
+
+            questionsArray.add(new Question(
+                    "What is the largest organ of human body?",
+                    "Skin",
+                    "Stomach",
+                    "Lung",
+                    "Kidney",
+                    "Skin",
+                    R.drawable.ic_skeleton));
+            tipsArray.add("An average adult's skin spans 21 square feet. It's your body's largest organ.");
+
+            questionsArray.add(new Question(
+                    "How many people have problem of acne?",
                     "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "100%",
+                    "85%",
+                    "5%",
+                    "85%",
+                    R.drawable.ic_acne));
+            tipsArray.add("Nearly 85 percent of people have acne at some point in their lives. ");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
-
-            questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
-
-            questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
-
-            questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What is the function of sweating?",
+                    "No function",
+                    "Run faster",
+                    "Increase strength",
+                    "Regulate body temperature",
+                    "Regulate body temperature",
+                    R.drawable.ic_sweating));
+            tipsArray.add("Sweating is a bodily function that helps regulate your body temperature.");
         }
         else if (skill.equals("science") && tree == 1 && stage == 3)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
+                    "How much blood does a normal adult have?",
+                    "50mL",
+                    "500mL",
+                    "5000mL",
+                    "50000mL",
+                    "5000mL",
+                    R.drawable.ic_blooddrop));
+            tipsArray.add("The average adult weighing 150 to 180 pounds should have about 4,500 to 5,700 mL of blood in their body.");
+
+            questionsArray.add(new Question(
+                    "What is the percentage of plasma in human blood?",
+                    "85%",
+                    "15%",
+                    "5%",
+                    "55%",
+                    "55%",
+                    R.drawable.ic_blood));
+            tipsArray.add("Blood is composed of about 55 percent plasma, 40 percent red blood cells, 4 percent platelets, 1 percent white blood cells.");
+
+            questionsArray.add(new Question(
+                    "What is the percentage of white blood cell in human blood?",
+                    "85%",
+                    "15%",
                     "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "55%",
+                    "55%",
+                    R.drawable.ic_whitebloodcell));
+            tipsArray.add("Blood is composed of about 55 percent plasma, 40 percent red blood cells, 4 percent platelets, 1 percent white blood cells.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is necessary for pregnancy to occur?",
+                    "Platelet",
+                    "White blood cells",
+                    "Plasma",
+                    "Red blood cells",
+                    "White blood cells",
+                    R.drawable.ic_blooddrop));
+            tipsArray.add("Certain white blood cells called macrophages assist in the development of blood vessel networks in the ovary");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
-
-            questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
-
-            questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "What is the lifespan of Red Blood Cells?",
+                    "4 months",
+                    "1 months",
+                    "4 days",
+                    "4 years",
+                    "4 months",
+                    R.drawable.ic_blood));
+            tipsArray.add("Red blood cells circulate in the body for about 4 months");
         }
         else if (skill.equals("science") && tree == 1 && stage == 4)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
+                    "How much oxygen you body takes for each inhale?",
                     "1%",
-                    "50%",
+                    "5%",
                     "72%",
                     "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "5%",
+                    R.drawable.ic_breath));
+            tipsArray.add("When you breathe, your body uses just 5% of the oxygen you’ve inhaled. The rest is exhaled and the cycle repeats.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What will be expelled when exhaling?",
+                    "carbon-dioxide waste",
+                    "water",
+                    "All of above",
+                    "None of above",
+                    "All of above",
+                    R.drawable.ic_breath));
+            tipsArray.add("Breathing allows you to take in the oxygen your cells need and expel carbon-dioxide waste and a lot of water.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What is the capacity of human lungs?",
+                    "5 liters",
+                    "1 liters",
+                    "10 liters",
+                    "15 liters",
+                    "5 liters",
+                    R.drawable.ic_lungs));
+            tipsArray.add("The lung capacity of an adult is approximately 4 to 6 liters of air.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "Which side of human lung is smaller?",
+                    "Left",
+                    "Right",
+                    "Top",
+                    "Bottom",
+                    "Left",
+                    R.drawable.ic_lungs));
+            tipsArray.add("The left lung tends to be smaller than the right lung in people to accommodate for the heart.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "At least how much air will remain in your lungs when u exhale?",
+                    "No air",
+                    "5 liters",
+                    "10 liters",
+                    "1 liters",
+                    "1 liters",
+                    R.drawable.ic_breath));
+            tipsArray.add("Even if you exhale really hard, a residual volume of 1 to 1.2 liters of air remains in your lungs");
         }
         else if (skill.equals("science") && tree == 1 && stage == 5)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "How many times will human heart beat in a day?",
+                    "10",
+                    "1000",
+                    "10000",
+                    "100000",
+                    "100000",
+                    R.drawable.ic_heartbeat));
+            tipsArray.add("Your heart beats about 100,000 times in one day and about 35 million times in a year.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "What is the function of Wisdom Teeth",
+                    "No function",
+                    "Increase Wisdom",
+                    "Decrease Wisdom",
+                    "Bite Stronger",
+                    "No function",
+                    R.drawable.ic_wisdomtooth));
+            tipsArray.add("Wisdom teeth serve no purpose. They’re left over from hundreds of thousands of years ago.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "What makes the sound of cracking your knuckles?",
+                    "Cracking of skin",
+                    "Cracking of joint",
+                    "Gas bubbles bursting in joints",
+                    "Cracking of bone",
+                    "Gas bubbles bursting in joints",
+                    R.drawable.ic_finger));
+            tipsArray.add("The satisfying sound of cracking your knuckles comes from gas bubbles bursting in your joints.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "How many muscles in tongue?",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "8",
+                    R.drawable.ic_tongue1));
+            tipsArray.add("Your tongue is made up of eight interwoven muscles, similar in structure to an elephant’s trunk or an octopus’s tentacle.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "How many taste zone does tongue have",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "4",
+                    R.drawable.ic_tongue2));
+            tipsArray.add("The four taste zones on your tongue are bitter (back), sour (back sides), salty (front sides), and sweet (front).");
         }
         else if (skill.equals("science") && tree == 2 && stage == 1)
         {
