@@ -77,6 +77,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
 
 
+
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -95,7 +96,7 @@ public class SignupActivity extends AppCompatActivity {
                                             if(task.isSuccessful())
                                             {
                                                 Toast.makeText(SignupActivity.this, "User has been registered successfully" , Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                                                startActivity(new Intent(SignupActivity.this, HomeActivity.class));
                                                 finish();
                                             }
                                             else
@@ -115,7 +116,7 @@ public class SignupActivity extends AppCompatActivity {
     public User createDefaultUser(String inputEmail)
     {
         String  Name, Email, Phone, ProfilepicUrl;
-        Integer AMS, HMS, SMS, Exp;
+        Integer AMS, HMS, SMS, experientPoint;
         HashMap<String, StageCompleted> stageCompleted = new HashMap<String, StageCompleted>();
         HashMap<String, Integer> badgeCompleted = new HashMap<String, Integer>();
         Name = "Explorer";
@@ -125,7 +126,6 @@ public class SignupActivity extends AppCompatActivity {
         AMS = 0;
         HMS = 0;
         SMS = 0;
-        Exp = 0;
         StageCompleted animal = new StageCompleted(0,0,0,0,0);
         StageCompleted history = new StageCompleted(0,0,0,0,0);
         StageCompleted science = new StageCompleted(0,0,0,0,0);
@@ -139,7 +139,8 @@ public class SignupActivity extends AppCompatActivity {
         badgeCompleted.put("badge5",0);
         badgeCompleted.put("badge6",0);
         badgeCompleted.put("badge7",0);
-        User user = new User(Name,Email,Phone,ProfilepicUrl,AMS,HMS,SMS,Exp,stageCompleted,badgeCompleted);
+        experientPoint=0;
+        User user = new User(Name,Email,Phone,ProfilepicUrl,AMS,HMS,SMS,stageCompleted,badgeCompleted,experientPoint);
         return user;
     }
 }

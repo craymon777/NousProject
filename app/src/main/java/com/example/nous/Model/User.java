@@ -5,12 +5,12 @@ import java.util.HashMap;
 public class User {
     private String name,email,phone,profilePictureUrl;
     private Integer animalMasteryPoint, historyMasteryPoint, scienceMasteryPoint, experientPoint;
-    private HashMap<String, StageCompleted> stageCompletedCounter;
+    public HashMap<String, StageCompleted> stageCompletedCounter;
     private HashMap<String, Integer> badgeCompletedCounter;
 
     public User(){}
 
-    public User(String name, String email, String phone, String profilePictureUrl, Integer animalMasteryPoint, Integer historyMasteryPoint, Integer scienceMasteryPoint,Integer experientPoint,  HashMap<String, StageCompleted> stageCompletedCounter, HashMap<String, Integer> badgeCompletedCounter) {
+    public User(String name, String email, String phone, String profilePictureUrl, Integer animalMasteryPoint, Integer historyMasteryPoint, Integer scienceMasteryPoint, HashMap<String, StageCompleted> stageCompletedCounter, HashMap<String, Integer> badgeCompletedCounter, Integer experientPoint) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -18,10 +18,9 @@ public class User {
         this.animalMasteryPoint = animalMasteryPoint;
         this.historyMasteryPoint = historyMasteryPoint;
         this.scienceMasteryPoint = scienceMasteryPoint;
-        this.experientPoint = experientPoint;
         this.stageCompletedCounter = stageCompletedCounter;
         this.badgeCompletedCounter = badgeCompletedCounter;
-
+        this.experientPoint =experientPoint;
     }
 
     public String getName() {
@@ -60,7 +59,25 @@ public class User {
         return stageCompletedCounter;
     }
 
+    public void addStageCompletedCounter(String skill, int stage) {
+        StageCompleted temp=stageCompletedCounter.get(skill);
+        temp.addStage(stage);
+        stageCompletedCounter.put(skill,temp);
+    }
+
     public HashMap<String, Integer> getBadgeCompletedCounter() {
         return badgeCompletedCounter;
+    }
+
+    public boolean getBadge(String skill) {
+        StageCompleted check=stageCompletedCounter.get(skill);
+        if (check.Stage1>0 && check.Stage2>0 && check.Stage3>0 && check.Stage4>0 && check.Stage5>0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

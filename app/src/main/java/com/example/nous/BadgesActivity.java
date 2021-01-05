@@ -1,5 +1,6 @@
 package com.example.nous;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,7 +13,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.nous.Model.StageCompleted;
+import com.example.nous.Model.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BadgesActivity extends AppCompatActivity {
 
@@ -74,40 +86,79 @@ public class BadgesActivity extends AppCompatActivity {
     {
         badgeArrayList = new ArrayList<>();
 
-        badgeArrayList.add(new Badge(
-           "Jungle King",
-            "Obtain by complete Animal skill",
-                R.drawable.lion, 0));
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User currentUser = snapshot.getValue(User.class);
+                if(currentUser.getBadgeCompletedCounter().get("badge1")==1)
+                {
+                    badgeArrayList.add(new Badge(
+                            "Jungle King",
+                            "Obtain by complete Animal skill",
+                            R.drawable.lion, 1));
+                }
+                else
+                {
+                    badgeArrayList.add(new Badge(
+                            "Jungle King",
+                            "Obtain by complete Animal skill",
+                            R.drawable.lion, 0));
+                }
+                if(currentUser.getBadgeCompletedCounter().get("badge2")==1)
+                {
+                    badgeArrayList.add(new Badge(
+                            "Science Freak",
+                            "Obtain by complete Science skill",
+                            R.drawable.einstein, 1));
+                }
+                else
+                {
+                    badgeArrayList.add(new Badge(
+                            "Science Freak",
+                            "Obtain by complete Science skill",
+                            R.drawable.einstein, 0));
+                }
+                if(currentUser.getBadgeCompletedCounter().get("badge3")==1)
+                {
+                    badgeArrayList.add(new Badge(
+                            "Historian",
+                            "Obtain by complete History skill",
+                            R.drawable.ic_explorer, 1));
+                }
+                else
+                {
+                    badgeArrayList.add(new Badge(
+                            "Historian",
+                            "Obtain by complete History skill",
+                            R.drawable.ic_explorer, 0));
+                }
+                if(currentUser.getBadgeCompletedCounter().get("badge4")==1)
+                {
+                    badgeArrayList.add(new Badge(
+                            "God of knowledge",
+                            "Complete all skills",
+                            R.drawable.ra, 1));
+                }
+                else
+                {
+                    badgeArrayList.add(new Badge(
+                            "God of knowledge",
+                            "Complete all skills",
+                            R.drawable.ra, 0));
+                }
+            }
 
-        badgeArrayList.add(new Badge(
-                "Science Freak",
-                "Obtain by complete Science skill",
-                R.drawable.einstein, 0));
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-        badgeArrayList.add(new Badge(
-                "Historian",
-                "Obtain by complete History skill",
-                R.drawable.ic_explorer, 1));
+            }
+        });
 
-        badgeArrayList.add(new Badge(
-                "Bolt",
-                "Complete a stage within a minute",
-                R.drawable.ic_streak, 1));
 
-        badgeArrayList.add(new Badge(
-                "Blower",
-                "Use fan trice in a stage",
-                R.drawable.fan, 1));
 
-        badgeArrayList.add(new Badge(
-                "God of knowledge",
-                "Complete all skills",
-                R.drawable.ra, 0));
 
-        badgeArrayList.add(new Badge(
-                "Unstoppable",
-                "20 win streaks",
-                R.drawable.ic_badge, 1));
+
 
         badgeAdapter = new BadgeAdapter(this, badgeArrayList);
         //set adapter to recyclerView

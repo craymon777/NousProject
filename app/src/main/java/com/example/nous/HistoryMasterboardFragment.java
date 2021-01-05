@@ -2,6 +2,7 @@ package com.example.nous;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -70,52 +77,42 @@ public class HistoryMasterboardFragment extends Fragment {
         // Inflate the layout for this fragment
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_history_masterboard, container, false);
         recyclerView = view.findViewById(R.id.masterboard_recycler_view);
-
-        loadRankings();
-
+        historyMasterboardArrayList = new ArrayList<>();
         rankingAdapter = new RankingAdapter(recyclerView.getContext(), historyMasterboardArrayList);
         recyclerView.setAdapter(rankingAdapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        sortArrayList();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User");
+        reference.orderByChild("historyMasteryPoint").limitToLast(100);
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                historyMasterboardArrayList = new ArrayList<>();
+                for(DataSnapshot dataSnapshot: snapshot.getChildren())
+                {
+                    historyMasterboardArrayList.add(new Ranking(
+                            dataSnapshot.child("name").getValue(String.class),
+                            dataSnapshot.child("historyMasteryPoint").getValue(Integer  .class),
+                            historyMasterboardArrayList.size()+1));
+                    Collections.sort(historyMasterboardArrayList);
+                    int counter = 1;
+                    for (Ranking i : historyMasterboardArrayList) {
+                        i.ranking = counter;
+                        counter++;
+                    }
+
+                }
+                rankingAdapter = new RankingAdapter(recyclerView.getContext(), historyMasterboardArrayList);
+                recyclerView.setAdapter(rankingAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         return view;
     }
 
-    public void sortArrayList(){
-
-        Collections.sort(historyMasterboardArrayList);
-        int counter = 1;
-        for (Ranking i : historyMasterboardArrayList) {
-            i.ranking = counter;
-            counter++;
-        }
-
-        rankingAdapter.notifyDataSetChanged();
-    }
-
-    public void loadRankings(){
-
-        historyMasterboardArrayList = new ArrayList<>();
-
-        historyMasterboardArrayList.add(new Ranking(
-                "Jasper",
-                100,
-                historyMasterboardArrayList.size()+1));
-
-        historyMasterboardArrayList.add(new Ranking(
-                "Koo Wei Chong",
-                130,
-                historyMasterboardArrayList.size()+1));
-
-        historyMasterboardArrayList.add(new Ranking(
-                "Tan Yue Bing",
-                85,
-                historyMasterboardArrayList.size()+1));
-
-        historyMasterboardArrayList.add(new Ranking(
-                "Ng Jing Jie",
-                120,
-                historyMasterboardArrayList.size()+1));
-
-    }
 }

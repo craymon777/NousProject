@@ -2,6 +2,7 @@ package com.example.nous;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,54 +63,44 @@ public class RankingFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.ranking_recycler_view);
 
-        loadRankings();
-
+        rankingArrayList = new ArrayList<>();
         rankingAdapter = new RankingAdapter(recyclerView.getContext(), rankingArrayList);
         recyclerView.setAdapter(rankingAdapter);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        sortArrayList();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User");
+        reference.orderByChild("experientPoint").limitToLast(100);
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rankingArrayList = new ArrayList<>();
+                for(DataSnapshot dataSnapshot: snapshot.getChildren())
+                {
+                    rankingArrayList.add(new Ranking(
+                            dataSnapshot.child("name").getValue(String.class),
+                            dataSnapshot.child("experientPoint").getValue(Integer.class),
+                            rankingArrayList.size()+1));
+                    Collections.sort(rankingArrayList);
+                    int counter = 1;
+                    for (Ranking i : rankingArrayList) {
+                        i.ranking = counter;
+                        counter++;
+                    }
+
+                }
+                rankingAdapter = new RankingAdapter(recyclerView.getContext(), rankingArrayList);
+                recyclerView.setAdapter(rankingAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         return view;
     }
 
-    public void sortArrayList(){
 
-        Collections.sort(rankingArrayList);
-        int counter = 1;
-        for (Ranking i : rankingArrayList) {
-            i.ranking = counter;
-            counter++;
-        }
-
-        rankingAdapter.notifyDataSetChanged();
-    }
-
-    public void loadRankings(){
-
-        rankingArrayList = new ArrayList<>();
-
-        rankingArrayList.add(new Ranking(
-                "Jasper",
-                1314528,
-                rankingArrayList.size()+1));
-
-        rankingArrayList.add(new Ranking(
-                "Jasper",
-                1314524,
-                rankingArrayList.size()+1));
-
-        rankingArrayList.add(new Ranking(
-                "Jasper",
-                1314530,
-                rankingArrayList.size()+1));
-
-        rankingArrayList.add(new Ranking(
-                "Jasper",
-                1314556,
-                rankingArrayList.size()+1));
-
-        //rankingAdapter = new RankingAdapter(recyclerView.getContext(), rankingArrayList);
-        //set adapter to recyclerView
-        //recyclerView.setAdapter(rankingAdapter);
-    }
 }

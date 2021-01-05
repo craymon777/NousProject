@@ -1,8 +1,9 @@
 package com.example.nous;
 
 public class Ranking implements Comparable<Ranking>{
+    int point;
     String username;
-    int point, ranking;
+    int ranking;
 
     public int getRanking() {
         return ranking;

@@ -29,6 +29,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class ProfileFragment extends Fragment {
     public ProfileFragment() {
+        // Required empty public constructor
     }
 
     @Override
