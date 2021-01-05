@@ -25,6 +25,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() != null)
+        {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        }
         setContentView(R.layout.activity_login);
 
         inputEmail = (EditText) findViewById(R.id.email);
@@ -33,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.buttonconfirm);
         btnResetPassword = (Button) findViewById(R.id.buttonforgotpass2);
 
-        auth = FirebaseAuth.getInstance();
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
