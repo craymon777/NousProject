@@ -42,7 +42,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private static final int REQUESCODE = 2 ;
     EditText name, phone;
     ImageView btn_back,profilePicture;
-    Button btn_update;
+    Button btn_update,btn_updateProfilePic;
     String email, profileURL;
     private Uri pickedImgUri = null;
 
@@ -57,8 +57,9 @@ public class EditProfileActivity extends AppCompatActivity {
         btn_update = findViewById(R.id.buttonUpdate);
         btn_back = findViewById(R.id.back);
         profilePicture = findViewById(R.id.EditProfilePic);
+        btn_updateProfilePic = findViewById(R.id.btnEditProfilePicture);
 
-        profilePicture.setOnClickListener(new View.OnClickListener() {
+        btn_updateProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAndRequestForPermission();
