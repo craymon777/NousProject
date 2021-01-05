@@ -2,16 +2,32 @@ package com.example.nous;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+
+import com.bumptech.glide.Glide;
+import com.example.nous.Model.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +38,7 @@ public class masterboardFragment extends Fragment {
 
     RecyclerView recyclerView;
     private RankingAdapter rankingAdapter;
-    private ArrayList<Ranking> masterboardArrayList;
+    public ArrayList<Ranking> masterboardArrayList;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,55 +86,45 @@ public class masterboardFragment extends Fragment {
         // Inflate the layout for this fragment
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_masterboard, container, false);
         recyclerView = view.findViewById(R.id.masterboard_recycler_view);
-
-        loadRankings();
-
+        masterboardArrayList = new ArrayList<>();
         rankingAdapter = new RankingAdapter(recyclerView.getContext(), masterboardArrayList);
         recyclerView.setAdapter(rankingAdapter);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        sortArrayList();
+
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                masterboardArrayList = new ArrayList<>();
+                for(DataSnapshot dataSnapshot: snapshot.getChildren())
+                {
+                    masterboardArrayList.add(new Ranking(
+                            dataSnapshot.child("name").getValue(String.class),
+                            dataSnapshot.child("animalMasteryPoint").getValue(Integer.class),
+                            masterboardArrayList.size()+1));
+                    Collections.sort(masterboardArrayList);
+                    int counter = 1;
+                    for (Ranking i : masterboardArrayList) {
+                        i.ranking = counter;
+                        counter++;
+                    }
+
+                }
+                rankingAdapter = new RankingAdapter(recyclerView.getContext(), masterboardArrayList);
+                recyclerView.setAdapter(rankingAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         return view;
     }
 
-    public void sortArrayList(){
 
-        Collections.sort(masterboardArrayList);
-        int counter = 1;
-        for (Ranking i : masterboardArrayList) {
-            i.ranking = counter;
-            counter++;
-        }
-
-        rankingAdapter.notifyDataSetChanged();
-    }
-
-    public void loadRankings(){
-
-        masterboardArrayList = new ArrayList<>();
-
-        masterboardArrayList.add(new Ranking(
-                "Jasper",
-                100,
-                masterboardArrayList.size()+1));
-
-        masterboardArrayList.add(new Ranking(
-                "Koo Wei Chong",
-                130,
-                masterboardArrayList.size()+1));
-
-        masterboardArrayList.add(new Ranking(
-                "Tan Yue Bing",
-                85,
-                masterboardArrayList.size()+1));
-
-        masterboardArrayList.add(new Ranking(
-                "Ng Jing Jie",
-                120,
-                masterboardArrayList.size()+1));
-
-        //rankingAdapter = new RankingAdapter(recyclerView.getContext(), masterboardArrayList);
-        //set adapter to recyclerView
-        //recyclerView.setAdapter(rankingAdapter);
-    }
 }
