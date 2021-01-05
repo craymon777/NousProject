@@ -29,7 +29,6 @@ import com.google.firebase.storage.StorageReference;
 
 public class ProfileFragment extends Fragment {
     public ProfileFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -37,7 +36,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         TextView name, email, phone, animalscore, historyscore, sciencescore;
         ImageView profilepic;
-        Button editProfile;
+        Button editProfile, btnLogout;
+        FirebaseAuth fAuth;
+        fAuth = FirebaseAuth.getInstance();
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
         name = v.findViewById(R.id.tvName);
         email = v.findViewById(R.id.tvEmail);
@@ -46,8 +47,8 @@ public class ProfileFragment extends Fragment {
         historyscore = v.findViewById(R.id.tvhistory);
         sciencescore = v.findViewById(R.id.tvScience);
         profilepic = v.findViewById(R.id.profilepic);
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("user").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        StorageReference sReference = FirebaseStorage.getInstance().getReference().child("avatar.png");
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -55,10 +56,17 @@ public class ProfileFragment extends Fragment {
                 name.setText(currentUser.getName());
                 email.setText(currentUser.getEmail());
                 phone.setText(currentUser.getPhone());
-                animalscore.setText(currentUser.getAnimalScore());
-                historyscore.setText(currentUser.getHistoryScore());
-                sciencescore.setText(currentUser.getScienceScore());
-                Glide.with(v).load(currentUser.getProfilepic()).into(profilepic);
+                animalscore.setText(currentUser.getAnimalMasteryPoint().toString());
+                historyscore.setText(currentUser.getHistoryMasteryPoint().toString());
+                sciencescore.setText(currentUser.getScienceMasteryPoint().toString());
+                if(currentUser.getProfilePictureUrl().isEmpty())
+                {
+                    Glide.with(v).load(R.drawable.ic_explorer).into(profilepic);
+                }
+                else
+                {
+                    Glide.with(v).load(currentUser.getProfilePictureUrl()).into(profilepic);
+                }
             }
 
             @Override
@@ -75,6 +83,15 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        btnLogout = (Button) v.findViewById(R.id.buttonLogout);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fAuth.signOut();
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
+        });
         return v;
     }
 }

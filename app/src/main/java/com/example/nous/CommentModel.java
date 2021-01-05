@@ -1,8 +1,19 @@
 package com.example.nous;
 
+import com.google.firebase.database.ServerValue;
+
 public class CommentModel {
 
-    private String username, comment, commentDate;
+    private String username, comment;
+    Object commentDate;
+
+    public CommentModel(){}
+
+    public CommentModel(String username, String comment) {
+        this.username = username;
+        this.comment = comment;
+        this.commentDate = ServerValue.TIMESTAMP;
+    }
 
     public String getUsername() {
         return username;
@@ -20,11 +31,11 @@ public class CommentModel {
         this.comment = comment;
     }
 
-    public String getCommentDate() {
+    public Object getCommentDate() {
         return commentDate;
     }
 
-    public void setCommentDate(String commentDate) {
+    public void setCommentDate(Object commentDate) {
         this.commentDate = commentDate;
     }
 }

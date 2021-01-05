@@ -1,5 +1,6 @@
 package com.example.nous;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -9,8 +10,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.nous.Model.User;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -25,10 +34,16 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ImageView lBoard_btn;
     private ImageView badges_btn;
+    private ImageView forum_btn;
     private ImageView profile_btn;
-
+    private ImageView profile_pic;
+    private TextView username;
+    private TextView userLevel;
+    private TextView tvExperience;
     private ArrayList<HomeCardModel> modelArrayList;
     private HomeCardAdapter homeCardAdapter;
+    private Integer experiencePoint;
+    private Integer uLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +64,37 @@ public class HomeActivity extends AppCompatActivity {
         });
         //---------log out section-----------
 
-        setExpBar();
+        username = findViewById(R.id.tvUsername);
+        userLevel = findViewById(R.id.tvUserLevel);
+        profile_pic = findViewById(R.id.ProfilePicture);
+        tvExperience = findViewById(R.id.tvExperience);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User currentUser = snapshot.getValue(User.class);
+                username.setText(currentUser.getName());
+                experiencePoint = currentUser.getExperientPoint();
+                uLevel = experiencePoint/100;
+                Integer expMod = mod(experiencePoint,100);
+                userLevel.setText("Level:" + uLevel.toString());
+                tvExperience.setText(expMod.toString());
+                setExpBar(expMod);
+                if(currentUser.getProfilePictureUrl().isEmpty())
+                {
+                    Glide.with(HomeActivity.this).load(R.drawable.ic_explorer).into(profile_pic);
+                }
+                else
+                {
+                    Glide.with(HomeActivity.this).load(currentUser.getProfilePictureUrl()).into(profile_pic);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         lBoard_btn = findViewById(R.id.imgLeaderboard);
         lBoard_btn.setClickable(true);
@@ -60,6 +105,8 @@ public class HomeActivity extends AppCompatActivity {
         profile_btn = findViewById(R.id.imgProfile);
         profile_btn.setClickable(true);
 
+        forum_btn = findViewById(R.id.imgForum);
+        forum_btn.setClickable(true);
 
         viewPager = findViewById(R.id.viewPagerHome);
         loadCards();
@@ -88,6 +135,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        forum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ForumActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //viewPager on change listener
         /*viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -108,11 +163,19 @@ public class HomeActivity extends AppCompatActivity {
         });*/
     }
 
-    public void setExpBar()
+    public Integer mod(Integer x, Integer y)
+    {
+        Integer result = x % y;
+        if (result < 0)
+            result = result + y;
+        return result;
+    }
+
+    public void setExpBar(Integer exp)
     {
         expBar = findViewById(R.id.expBar);
 
-        expBar.setProgress(50);
+        expBar.setProgress(exp);
     }
 
     public void loadCards()
@@ -152,9 +215,4 @@ public class HomeActivity extends AppCompatActivity {
         viewPager.setPadding(125,0,155,0);
     }
 
-    public void navigateToForum(View view)
-    {
-        Intent intent = new Intent(this, ForumActivity.class);
-        startActivity(intent);
-    }
 }

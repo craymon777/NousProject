@@ -11,10 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.nous.Model.StageCompleted;
+import com.example.nous.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -72,7 +77,6 @@ public class SignupActivity extends AppCompatActivity {
                 }
 
 
-
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -82,13 +86,60 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
-                                    finish();
+                                    User newUser = createDefaultUser(email);
+                                    FirebaseDatabase.getInstance().getReference("User")
+                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful())
+                                            {
+                                                Toast.makeText(SignupActivity.this, "User has been registered successfully" , Toast.LENGTH_SHORT).show();
+                                                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                                                finish();
+                                            }
+                                            else
+                                            {
+                                                Toast.makeText(SignupActivity.this, "Failed to register! Try Again!" , Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
                                 }
                             }
                         });
 
             }
         });
+    }
+
+    public User createDefaultUser(String inputEmail)
+    {
+        String  Name, Email, Phone, ProfilepicUrl;
+        Integer AMS, HMS, SMS, Exp;
+        HashMap<String, StageCompleted> stageCompleted = new HashMap<String, StageCompleted>();
+        HashMap<String, Integer> badgeCompleted = new HashMap<String, Integer>();
+        Name = "Explorer";
+        Email = inputEmail;
+        Phone = "";
+        ProfilepicUrl = "";
+        AMS = 0;
+        HMS = 0;
+        SMS = 0;
+        Exp = 0;
+        StageCompleted animal = new StageCompleted(0,0,0,0,0);
+        StageCompleted history = new StageCompleted(0,0,0,0,0);
+        StageCompleted science = new StageCompleted(0,0,0,0,0);
+        stageCompleted.put("animal", animal);
+        stageCompleted.put("history",history);
+        stageCompleted.put("science",science);
+        badgeCompleted.put("badge1",0);
+        badgeCompleted.put("badge2",0);
+        badgeCompleted.put("badge3",0);
+        badgeCompleted.put("badge4",0);
+        badgeCompleted.put("badge5",0);
+        badgeCompleted.put("badge6",0);
+        badgeCompleted.put("badge7",0);
+        User user = new User(Name,Email,Phone,ProfilepicUrl,AMS,HMS,SMS,Exp,stageCompleted,badgeCompleted);
+        return user;
     }
 }
