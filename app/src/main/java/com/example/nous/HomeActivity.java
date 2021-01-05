@@ -50,19 +50,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //---------log out section-----------
-        auth = FirebaseAuth.getInstance();
-
-        btnLogout = (Button) findViewById(R.id.btnLogout);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                auth.signOut();
-                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-            }
-        });
-        //---------log out section-----------
 
         username = findViewById(R.id.tvUsername);
         userLevel = findViewById(R.id.tvUserLevel);
