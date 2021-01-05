@@ -82,7 +82,14 @@ public class EditProfileActivity extends AppCompatActivity {
                 phone.setText(currentUser.getPhone());
                 email = currentUser.getEmail();
                 profileURL = currentUser.getProfilePictureUrl();
-                Glide.with(EditProfileActivity.this).load(profileURL.toString()).into(profilePicture);
+                if(profileURL.isEmpty())
+                {
+                    Glide.with(EditProfileActivity.this).load(R.drawable.ic_explorer).into(profilePicture);
+                }
+                else
+                {
+                    Glide.with(EditProfileActivity.this).load(profileURL).into(profilePicture);
+                }
             }
 
             @Override
