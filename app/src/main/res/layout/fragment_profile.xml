@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/iconLayout"
         android:layout_width="match_parent"
-        android:layout_height="175dp">
+        android:layout_height="165dp">
         <LinearLayout
             android:background="@drawable/ic_wave"
             android:layout_width="match_parent"
@@ -51,18 +51,31 @@
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
+
+
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:src="@drawable/ic_baseline_email_24" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="Email: "
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/tvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,12 +91,23 @@
                     android:src="@drawable/ic_baseline_phone_24" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="Phone: "
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/tvPhoneNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -99,12 +123,23 @@
                     android:src="@drawable/ic_animal" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="Animal MP: "
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/tvAnimal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -120,12 +155,23 @@
                     android:src="@drawable/ic_history" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="History MP: "
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/tvhistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -141,32 +187,54 @@
                     android:src="@drawable/ic_science" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="Science MP: "
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/tvScience"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#0B0A0A"
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnEditProfile"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/colorPrimaryVariant"
-                android:text="Edit Profile"
-                android:textColor="@color/black" />
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/buttonLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Log Out"
-                android:backgroundTint="@color/colorPrimaryVariant" />
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="125dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/trees_button"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="125dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/trees_button"
+
+                    android:text="Log Out" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 
