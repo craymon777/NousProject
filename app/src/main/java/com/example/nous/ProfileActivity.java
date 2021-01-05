@@ -19,7 +19,6 @@ import java.util.List;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private PagerAdapter pagerAdapter;
     private ViewPager viewPager;
     private ProfilePagerAdapter profilePagerAdapter;
     private ImageView back_btn;
@@ -34,6 +33,14 @@ public class ProfileActivity extends AppCompatActivity {
         forum_btn = findViewById(R.id.forumTab);
         leadership_btn = findViewById(R.id.rankingTab);
         back_btn = findViewById(R.id.back);
+
+        forum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, ForumActivity.class);
+                startActivity(intent);
+            }
+        });
 
         badges_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         list.add(new ProfileFragment());
 
         viewPager = findViewById(R.id.viewPager);
-        pagerAdapter = new ProfilePagerAdapter(getSupportFragmentManager(), list);
-        viewPager.setAdapter(pagerAdapter);
+        profilePagerAdapter = new ProfilePagerAdapter(getSupportFragmentManager(), list);
+        viewPager.setAdapter(profilePagerAdapter);
     }
 }

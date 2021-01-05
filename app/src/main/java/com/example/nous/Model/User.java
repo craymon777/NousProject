@@ -1,73 +1,66 @@
 package com.example.nous.Model;
 
+import java.util.HashMap;
+
 public class User {
-    private String Name,Email,Phone, AnimalScore,HistoryScore,ScienceScore, Profilepic;
+    private String name,email,phone,profilePictureUrl;
+    private Integer animalMasteryPoint, historyMasteryPoint, scienceMasteryPoint, experientPoint;
+    private HashMap<String, StageCompleted> stageCompletedCounter;
+    private HashMap<String, Integer> badgeCompletedCounter;
 
-    public User() { }
+    public User(){}
 
-    public User(String Name, String Email, String Phone, String AnimalScore, String HistoryScore, String ScienceScore, String Profilepic) {
-        this.Name = Name;
-        this.Email = Email;
-        this.Phone = Phone;
-        this.AnimalScore = AnimalScore;
-        this.HistoryScore = HistoryScore;
-        this.ScienceScore = ScienceScore;
-        this.Profilepic = Profilepic;
+    public User(String name, String email, String phone, String profilePictureUrl, Integer animalMasteryPoint, Integer historyMasteryPoint, Integer scienceMasteryPoint,Integer experientPoint,  HashMap<String, StageCompleted> stageCompletedCounter, HashMap<String, Integer> badgeCompletedCounter) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.profilePictureUrl = profilePictureUrl;
+        this.animalMasteryPoint = animalMasteryPoint;
+        this.historyMasteryPoint = historyMasteryPoint;
+        this.scienceMasteryPoint = scienceMasteryPoint;
+        this.experientPoint = experientPoint;
+        this.stageCompletedCounter = stageCompletedCounter;
+        this.badgeCompletedCounter = badgeCompletedCounter;
+
     }
 
     public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
+        return name;
     }
 
     public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
+        return email;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
+    public String getProfilePictureUrl() {
+        return profilePictureUrl;
     }
 
-    public String getAnimalScore() {
-        return AnimalScore;
+    public Integer getAnimalMasteryPoint() {
+        return animalMasteryPoint;
     }
 
-    public void setAnimalScore(String animalScore) {
-        AnimalScore = animalScore;
+    public Integer getHistoryMasteryPoint() {
+        return historyMasteryPoint;
     }
 
-    public String getHistoryScore() {
-        return HistoryScore;
+    public Integer getScienceMasteryPoint() {
+        return scienceMasteryPoint;
     }
 
-    public void setHistoryScore(String historyScore) {
-        HistoryScore = historyScore;
+    public Integer getExperientPoint() {
+        return experientPoint;
     }
 
-    public String getScienceScore() {
-        return ScienceScore;
+    public HashMap<String, StageCompleted> getStageCompletedCounter() {
+        return stageCompletedCounter;
     }
 
-    public void setScienceScore(String scienceScore) {
-        ScienceScore = scienceScore;
-    }
-
-    public String getProfilepic() {
-        return Profilepic;
-    }
-
-    public void setProfilepic(String profilepic) {
-        Profilepic = profilepic;
+    public HashMap<String, Integer> getBadgeCompletedCounter() {
+        return badgeCompletedCounter;
     }
 }

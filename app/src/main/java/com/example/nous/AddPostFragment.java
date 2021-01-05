@@ -1,5 +1,7 @@
 package com.example.nous;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,10 +14,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.nous.Model.User;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
+import com.google.firebase.database.ValueEventListener;
+
 public class AddPostFragment extends DialogFragment {
 
-    EditText etPostTitle, etPostContent;
+    EditText et_PostTitle, et_PostContent;
     Button btnSubmitPost;
+    private String imageUrl;
+    private String addPostUser;
 
     public AddPostFragment() {
         // Required empty public constructor
@@ -45,19 +59,52 @@ public class AddPostFragment extends DialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        etPostTitle = view.findViewById(R.id.etPostTitle);
-        etPostContent = view.findViewById(R.id.etComment);
-
+        et_PostTitle = view.findViewById(R.id.etPostTitle);
+        et_PostContent = view.findViewById(R.id.etPostContent);
         btnSubmitPost = view.findViewById(R.id.btnSubmitPost);
 
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User currentUser = snapshot.getValue(User.class);
+                imageUrl = currentUser.getProfilePictureUrl();
+                addPostUser = currentUser.getName();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //update post database here
         btnSubmitPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!et_PostTitle.getText().toString().isEmpty() && !et_PostContent.getText().toString().isEmpty())
+                {
 
-                //this function close the dialog
-                dismiss();
+                    String addPostTitle = et_PostTitle.getText().toString();
+                    String addPostContent = et_PostContent.getText().toString();
+
+                    PostModel newPost = new PostModel(addPostTitle,addPostContent,addPostUser,imageUrl);
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("Post").push();
+
+                    // get post unique ID and upadte post key
+                    String key = myRef.getKey();
+                    newPost.setPostKey(key);
+
+                    // add post data to firebase database
+
+                    myRef.setValue(newPost).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            startActivity(new Intent(getActivity(), ForumActivity.class));
+                        }
+                    });
+                }
             }
         });
 

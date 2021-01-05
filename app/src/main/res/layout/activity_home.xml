@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ProfilePicture"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="24dp"
@@ -42,11 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="34dp"
-        android:text="Alex"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/ProfilePicture"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <TextView
@@ -55,9 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:text="Lv: 10"
         android:textColor="#FFFEFE"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/ProfilePicture"
         app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
     <ProgressBar
@@ -67,7 +65,7 @@
         android:layout_height="14dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:progress="65"
+        android:progress="0"
         android:progressDrawable="@drawable/expbar_drawable"
         app:layout_constraintStart_toEndOf="@+id/tvUserLevel"
         app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
@@ -258,7 +256,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="12dp"
-        android:text="60/100"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintStart_toEndOf="@+id/expBar" />
 

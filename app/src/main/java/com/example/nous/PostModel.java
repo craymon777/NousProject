@@ -1,9 +1,36 @@
 package com.example.nous;
 
-public class PostModel {
-    private String postTitle, postDate, postUser;
+import com.google.firebase.database.ServerValue;
 
-    private int postImg;
+public class PostModel {
+    private String postKey, postContent, postTitle, postUser, postImg;
+    private Object timeStamp ;
+
+    public  PostModel(){}
+
+    public PostModel(String postTitle, String postContent, String postUser, String postImg) {
+        this.postTitle = postTitle;
+        this.postContent = postContent;
+        this.postUser = postUser;
+        this.postImg = postImg;
+        this.timeStamp = ServerValue.TIMESTAMP;
+    }
+
+    public String getPostKey() {
+        return postKey;
+    }
+
+    public void setPostKey(String postKey) {
+        this.postKey = postKey;
+    }
+
+    public String getPostContent() {
+        return postContent;
+    }
+
+    public void setPostContent(String postContent) {
+        this.postContent = postContent;
+    }
 
     public String getPostTitle() {
         return postTitle;
@@ -13,12 +40,12 @@ public class PostModel {
         this.postTitle = postTitle;
     }
 
-    public String getPostDate() {
-        return postDate;
+    public Object getTimeStamp() {
+        return timeStamp;
     }
 
-    public void setPostDate(String postDate) {
-        this.postDate = postDate;
+    public void setTimeStamp(Object timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     public String getPostUser() {
@@ -29,11 +56,11 @@ public class PostModel {
         this.postUser = postUser;
     }
 
-    public int getPostImg() {
+    public String getPostImg() {
         return postImg;
     }
 
-    public void setPostImg(int postImg) {
+    public void setPostImg(String postImg) {
         this.postImg = postImg;
     }
 }
