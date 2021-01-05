@@ -42,7 +42,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private static final int REQUESCODE = 2 ;
     EditText name, phone;
     ImageView btn_back,profilePicture;
-    Button btn_update;
+    Button btn_update,btn_updateProfilePic;
     String email, profileURL;
     private Uri pickedImgUri = null;
 
@@ -57,8 +57,9 @@ public class EditProfileActivity extends AppCompatActivity {
         btn_update = findViewById(R.id.buttonUpdate);
         btn_back = findViewById(R.id.back);
         profilePicture = findViewById(R.id.EditProfilePic);
+        btn_updateProfilePic = findViewById(R.id.btnEditProfilePicture);
 
-        profilePicture.setOnClickListener(new View.OnClickListener() {
+        btn_updateProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAndRequestForPermission();
@@ -116,28 +117,31 @@ public class EditProfileActivity extends AppCompatActivity {
                     startActivity(firebaseUserIntent);
                     finish();
                 } else {
+                    reference.child("name").setValue(sName);
+                    reference.child(("phone")).setValue(sPhone);
                     StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("UserProfileImage");
-                    final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
-                    imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    String imageDownlaodLink = uri.toString();
-                                    reference.child("name").setValue(sName);
-                                    reference.child(("phone")).setValue(sPhone);
-                                    reference.child("profilePictureUrl").setValue(imageDownlaodLink);
-                                    Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
-                                    startActivity(intent);
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                }
-                            });
-                        }
-                    });
+                    if(pickedImgUri != null)
+                    {
+                        final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
+                        imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+                                        String imageDownlaodLink = uri.toString();
+                                        reference.child("profilePictureUrl").setValue(imageDownlaodLink);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                 }
             }
         });

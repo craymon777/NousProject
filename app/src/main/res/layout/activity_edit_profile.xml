@@ -51,7 +51,7 @@
     <RelativeLayout
         android:id="@+id/iconLayout"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="270dp"
         android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toTopOf="@+id/EditProfile"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="350dp"
             android:background="@drawable/ic_wave"
             android:orientation="vertical">
 
@@ -72,6 +72,14 @@
                 android:layout_marginTop="30dp"
                 android:src="@drawable/ic_explorer" />
 
+            <Button
+                android:id="@+id/btnEditProfilePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Edit Profile Picture" />
+
         </LinearLayout>
     </RelativeLayout>
 
@@ -82,14 +90,14 @@
         android:layout_below="@+id/iconLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="155dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/iconLayout">
 
         <LinearLayout
             android:id="@+id/profileInformation"
@@ -141,15 +149,14 @@
 
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:id="@+id/buttonUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="159dp"
         android:layout_marginTop="63dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="70dp"
         android:text="Update"
         android:backgroundTint="@color/colorPrimaryVariant"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -158,5 +165,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditProfile"
         app:layout_constraintVertical_bias="1.0" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
