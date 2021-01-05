@@ -124,8 +124,8 @@ public class ScoreFragment extends Fragment {
                     reference.child("historyMasteryPoint").setValue(mastery+numOfCorrectAns*20);
                 }
                 HashMap<String, StageCompleted> stageCounter=currentUser.getStageCompletedCounter();
-                reference.child("stageCompletedCounter").child(skill).child("Stage"+stage).setValue(stageCounter.get(skill).getStage(stage)+1);
-                currentUser.addStageCompletedCounter(skill,stage);
+                reference.child("stageCompletedCounter").child(skill+tree).child("stage"+stage).setValue(stageCounter.get(skill+tree).getStage(stage)+1);
+                currentUser.addStageCompletedCounter(skill,tree,stage);
             }
 
             @Override
@@ -140,26 +140,36 @@ public class ScoreFragment extends Fragment {
         btnStageComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(currentUser.getBadge(skill))
+                if(currentUser.getBadge(skill,tree))
                 {
-                    if(skill.equals("animal") && currentUser.getBadgeCompletedCounter().get("badge1")==0)
+                    if(skill.equals("animal") && tree==1 && currentUser.getBadgeCompletedCounter().get("badge1")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge1").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
-                    else if(skill.equals("science") && currentUser.getBadgeCompletedCounter().get("badge2")==0)
+                    else if(skill.equals("science") && tree==1 && currentUser.getBadgeCompletedCounter().get("badge2")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge2").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
-                    else if(skill.equals("history") && currentUser.getBadgeCompletedCounter().get("badge3")==0)
+                    else if(skill.equals("history") && tree==1 && currentUser.getBadgeCompletedCounter().get("badge3")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge3").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
-                    else if(currentUser.getBadgeCompletedCounter().get("badge4")==0 && currentUser.getBadgeCompletedCounter().get("badge1")==1 && currentUser.getBadgeCompletedCounter().get("badge2")==1 && currentUser.getBadgeCompletedCounter().get("badge3")==1)
+                    if(skill.equals("animal") && tree==2 && currentUser.getBadgeCompletedCounter().get("badge5")==0)
                     {
-                        reference.child("badgeCompletedCounter").child("badge4").setValue(1);
+                        reference.child("badgeCompletedCounter").child("badge5").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
+                    }
+                    else if(skill.equals("science") && tree==2 && currentUser.getBadgeCompletedCounter().get("badge6")==0)
+                    {
+                        reference.child("badgeCompletedCounter").child("badge6").setValue(1);
+                        Navigation.findNavController(view).navigate(R.id.navToBadge);
+                    }
+                    else if(skill.equals("history") && tree==2 && currentUser.getBadgeCompletedCounter().get("badge7")==0)
+                    {
+                        reference.child("badgeCompletedCounter").child("badge7").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
                     else

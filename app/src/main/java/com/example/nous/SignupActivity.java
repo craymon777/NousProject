@@ -116,7 +116,7 @@ public class SignupActivity extends AppCompatActivity {
     public User createDefaultUser(String inputEmail)
     {
         String  Name, Email, Phone, ProfilepicUrl;
-        Integer AMS, HMS, SMS, experientPoint;
+        Integer AMS, HMS, SMS, Exp;
         HashMap<String, StageCompleted> stageCompleted = new HashMap<String, StageCompleted>();
         HashMap<String, Integer> badgeCompleted = new HashMap<String, Integer>();
         Name = "Explorer";
@@ -126,21 +126,23 @@ public class SignupActivity extends AppCompatActivity {
         AMS = 0;
         HMS = 0;
         SMS = 0;
+        Exp = 0;
         StageCompleted animal = new StageCompleted(0,0,0,0,0);
         StageCompleted history = new StageCompleted(0,0,0,0,0);
         StageCompleted science = new StageCompleted(0,0,0,0,0);
         stageCompleted.put("animal", animal);
+        stageCompleted.put("animal2", animal);
         stageCompleted.put("history",history);
-        stageCompleted.put("science",science);
+        stageCompleted.put("history2", history);
+        stageCompleted.put("science1",science);
+        stageCompleted.put("science2",science);
         badgeCompleted.put("badge1",0);
         badgeCompleted.put("badge2",0);
         badgeCompleted.put("badge3",0);
-        badgeCompleted.put("badge4",0);
         badgeCompleted.put("badge5",0);
         badgeCompleted.put("badge6",0);
         badgeCompleted.put("badge7",0);
-        experientPoint=0;
-        User user = new User(Name,Email,Phone,ProfilepicUrl,AMS,HMS,SMS,stageCompleted,badgeCompleted,experientPoint);
+        User user = new User(Name,Email,Phone,ProfilepicUrl,AMS,HMS,SMS,stageCompleted,badgeCompleted,Exp);
         return user;
     }
 }

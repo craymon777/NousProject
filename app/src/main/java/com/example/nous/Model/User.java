@@ -59,19 +59,19 @@ public class User {
         return stageCompletedCounter;
     }
 
-    public void addStageCompletedCounter(String skill, int stage) {
-        StageCompleted temp=stageCompletedCounter.get(skill);
+    public void addStageCompletedCounter(String skill,int tree, int stage) {
+        StageCompleted temp=stageCompletedCounter.get(skill+tree);
         temp.addStage(stage);
-        stageCompletedCounter.put(skill,temp);
+        stageCompletedCounter.put(skill+tree,temp);
     }
 
     public HashMap<String, Integer> getBadgeCompletedCounter() {
         return badgeCompletedCounter;
     }
 
-    public boolean getBadge(String skill) {
-        StageCompleted check=stageCompletedCounter.get(skill);
-        if (check.Stage1>0 && check.Stage2>0 && check.Stage3>0 && check.Stage4>0 && check.Stage5>0)
+    public boolean getBadge(String skill, Integer tree) {
+        StageCompleted check=stageCompletedCounter.get(skill+tree);
+        if (check.stage1>0 && check.stage2>0 && check.stage3>0 && check.stage4>0 && check.stage5>0)
         {
             return true;
         }
