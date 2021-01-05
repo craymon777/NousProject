@@ -89,9 +89,9 @@ public class ScoreFragment extends Fragment {
         textView = view.findViewById(R.id.tvCorrectAnswer);
         textView.setText(numOfCorrectAns + "/" + totalQuestion);
         textView1 = view.findViewById(R.id.tvMasteryAdd);
-        textView1.setText(numOfCorrectAns*20 + "/" + totalQuestion*20);
+        textView1.setText(numOfCorrectAns*20 + "");
         textView2 = view.findViewById(R.id.tvExpAdd);
-        textView2.setText(numOfCorrectAns*20 + "/" + totalQuestion*20);
+        textView2.setText(numOfCorrectAns*20 + "");
 
 
 
@@ -157,7 +157,7 @@ public class ScoreFragment extends Fragment {
                         reference.child("badgeCompletedCounter").child("badge3").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
                     }
-                    if(skill.equals("animal") && tree==2 && currentUser.getBadgeCompletedCounter().get("badge5")==0)
+                    else if(skill.equals("animal") && tree==2 && currentUser.getBadgeCompletedCounter().get("badge5")==0)
                     {
                         reference.child("badgeCompletedCounter").child("badge5").setValue(1);
                         Navigation.findNavController(view).navigate(R.id.navToBadge);
