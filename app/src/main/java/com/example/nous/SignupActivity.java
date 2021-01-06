@@ -130,9 +130,9 @@ public class SignupActivity extends AppCompatActivity {
         StageCompleted animal = new StageCompleted(0,0,0,0,0);
         StageCompleted history = new StageCompleted(0,0,0,0,0);
         StageCompleted science = new StageCompleted(0,0,0,0,0);
-        stageCompleted.put("animal", animal);
+        stageCompleted.put("animal1", animal);
         stageCompleted.put("animal2", animal);
-        stageCompleted.put("history",history);
+        stageCompleted.put("history1",history);
         stageCompleted.put("history2", history);
         stageCompleted.put("science1",science);
         stageCompleted.put("science2",science);
