@@ -91,6 +91,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 fAuth.signOut();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
+                getActivity().finish();
             }
         });
         return v;

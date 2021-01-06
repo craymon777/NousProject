@@ -77,23 +77,23 @@ public class History2Fragment extends Fragment implements StageAdapter.OnStageLi
 
         arrayList.add(new StageModel(
                 "Stage 1",
-                R.drawable.ic_ocean1));
+                R.drawable.ic_fact1));
 
         arrayList.add(new StageModel(
                 "Stage 2",
-                R.drawable.ic_ocean2));
+                R.drawable.ic_fact2));
 
         arrayList.add(new StageModel(
                 "Stage 3",
-                R.drawable.ic_ocean3));
+                R.drawable.ic_fact3));
 
         arrayList.add(new StageModel(
                 "Stage 4",
-                R.drawable.ic_ocean4));
+                R.drawable.ic_fact4));
 
         arrayList.add(new StageModel(
                 "Stage 5",
-                R.drawable.ic_ocean5));
+                R.drawable.ic_fact5));
 
 
 

@@ -37,7 +37,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
     //timer and freezer
     CountDownTimer timer;
     TextView tvTimer;
-    private long timerDuration = 3000; //milliseconds
+    private long timerDuration = 45000; //milliseconds
     ImageView ivFreeze;
     ImageButton imgBtnFreezer;
 
@@ -155,7 +155,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "650 million year",
                     "650 million year",
                     R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+            tipsArray.add("Jellyfish have been around for more than 650 million years, which means that they outdate both dinosaurs and sharks.");
 
             questionsArray.add(new Question(
                     "What is the color of octopus's blood?",
@@ -165,7 +165,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "Black",
                     "Blue",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("An Octopus has three hearts and the color of its blood is blue.");
 
             questionsArray.add(new Question(
                     "How does dolphin stay away from threats when sleeping?",
@@ -175,7 +175,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "Protected by human",
                     "Sleep with half of brain",
                     R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+            tipsArray.add("Dolphins sleep with only half of their brain and with one eye open so they can watch for predators.");
 
             questionsArray.add(new Question(
                     "What is the largest fish in ocean?",
@@ -185,7 +185,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
                     "Protected by human",
                     "Whale Shark",
                     R.drawable.whale));
-            tipsArray.add("Whale Shark");
+            tipsArray.add("The biggest fish in the ocean is the whale shark. Whale sharks may grow up to 40 feet and weigh as much as 40 tons by some estimates.");
         }
 
         else if (skill.equals("animal") && tree == 1 && stage == 2)
@@ -1795,7 +1795,7 @@ public class Animal1Stage1Activity extends AppCompatActivity {
             if (generateRandom(5))
                 resetCloud();
 
-            if (generateRandom(1))
+            if (generateRandom(4))
                 imgBtnFreezer.setVisibility(View.VISIBLE);
 
             resetTimer();
