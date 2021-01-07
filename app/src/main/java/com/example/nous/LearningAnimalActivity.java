@@ -592,7 +592,7 @@ public class LearningAnimalActivity extends AppCompatActivity {
                     tvContent2.setText("On April 30, 1789, George Washington, standing on the balcony of Federal Hall on Wall Street in New York, took his oath of office as the first President of the United States.");
 
                     tvContentTitle3.setText("Franklin Delano Roosevelt");
-                    tvContent3.setText("Franklin Delano Roosevelt is America’s longest serving president, having served from 1933 until his death in 1945 as a Democrat");
+                    tvContent3.setText("Franklin Delano Roosevelt is America’s longest serving president, having served from 1933 until his death in 1945 as a Democrat.");
 
                     tvContentTitle4.setText("William Henry Harrison");
                     tvContent4.setText("William Henry Harrison died of either typhoid, pneumonia, or paratyphoid fever 31 days into his term, becoming the first president to die in office and the shortest-serving U.S. president in history.");

@@ -1190,262 +1190,262 @@ public class Animal1Stage1Activity extends AppCompatActivity {
         else if (skill.equals("history") && tree == 1 && stage == 1)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
-                    R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+                    "Who is the oldest president in America?",
+                    "Donald Trump",
+                    "Abraham Lincoln",
+                    "Joe Biden",
+                    "Barack Obama",
+                    "Joe Biden",
+                    R.drawable.ic_president));
+            tipsArray.add("Joe Biden, who turned 78 on Nov. 20, has defeated Donald Trump and will become the oldest president in American history, a title previously held by Ronald Reagan.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
-                    R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+                    "Who is the first president in America?",
+                    "George Washington",
+                    "Abraham Lincoln",
+                    "Joe Biden",
+                    "Barack Obama",
+                    "George Washington",
+                    R.drawable.ic_president));
+            tipsArray.add("On April 30, 1789, George Washington, standing on the balcony of Federal Hall on Wall Street in New York, took his oath of office as the first President of the United States.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
-                    R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+                    "Who is the longest serving president in America?",
+                    "George Washington",
+                    "Abraham Lincoln",
+                    "Franklin Delano Roosevelt",
+                    "Barack Obama",
+                    "Franklin Delano Roosevelt",
+                    R.drawable.ic_president));
+            tipsArray.add("Franklin Delano Roosevelt is America’s longest serving president, having served from 1933 until his death in 1945 as a Democrat.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
-                    R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+                    "Who is the shortest serving president in America?",
+                    "George Washington",
+                    "Abraham Lincoln",
+                    "Franklin Delano Roosevelt",
+                    "William Henry Harrison",
+                    "William Henry Harrison",
+                    R.drawable.ic_president));
+            tipsArray.add("William Henry Harrison died of either typhoid, pneumonia, or paratyphoid fever 31 days into his term, becoming the shortest-serving U.S. president in history.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
-                    R.drawable.whale));
-            tipsArray.add("Whale Shark");
+                    "Who is the youngest president in America?",
+                    "John F. Kennedy",
+                    "Abraham Lincoln",
+                    "Franklin Delano Roosevelt",
+                    "William Henry Harrison",
+                    "John F. Kennedy",
+                    R.drawable.ic_president));
+            tipsArray.add("The youngest to become president by election was John F. Kennedy, who was 43 years, 236 days, at his inauguration.");
         }
         else if (skill.equals("history") && tree == 1 && stage == 2)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
+                    "How many pyramids have been discovered in Egypt?",
+                    "130",
+                    "50",
+                    "72",
+                    "27",
+                    "130",
                     R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+            tipsArray.add("To date, over 130 pyramids have been discovered in Egypt.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
+                    "Why Egyptians preserving a dead person’s body?",
+                    "To pay respect",
+                    "Protect from enemy",
+                    "For fun",
+                    "Their soul would live forever",
+                    "Their soul would live forever",
                     R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+            tipsArray.add("The afterlife was incredibly important to the Egyptians. They believed that by preserving a dead person’s body, their soul would live on in the after-life forever.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
+                    "What is the largest Pyramid in Egypt?",
+                    "Pyramid of Khafre",
+                    "Pyramids of Giza",
+                    "Pyramid of Khufu",
+                    "Pyramid of Menkaure",
+                    "Pyramid of Khufu",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("The Pyramid of Khufu at Giza is the largest Egyptian pyramid. This incredible structure weighs as much as 16 Empire State buildings!");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
+                    "What is the colour of Eye-paint of Egyptian?",
+                    "Blue or red",
+                    "Green or black",
+                    "Yellow or red",
+                    "Blue or yellow",
+                    "Green or black",
                     R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+            tipsArray.add("Both Egyptian men and women wore make-up. The eye-paint was usually green (made from copper) or black (made from lead).");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
+                    "How long could an unwrapped bandages of an Ancient Egyptian?",
+                    "16.6km",
+                    "10.6km",
+                    "0.6km",
+                    "1.6km",
+                    "1.6km",
                     R.drawable.whale));
-            tipsArray.add("Whale Shark");
+            tipsArray.add("Unwrapped, the bandages of an Ancient Egyptian mummy could stretch for 1.6km. Yikes!");
         }
         else if (skill.equals("history") && tree == 1 && stage == 3)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
+                    "How much deities do Ancient Egyptians have?",
+                    "300",
+                    "20",
+                    "2",
+                    "2000",
+                    "2000",
                     R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+            tipsArray.add("Ancient Egyptians believed in more than 2,000 deities! They had gods for everything, from dangers to chores!");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
+                    "What animal do Ancient Egyptians will bring good luck?",
+                    "Cat",
+                    "Dog",
+                    "Turtle",
+                    "Lion",
+                    "Cat",
                     R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+            tipsArray.add("Cats were considered to be a sacred animal by the Ancient Egyptians. They believed would bring the household good luck to keep it as pet!");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
+                    "How long ago since the first Egyptian?",
+                    "80 years ago",
+                    "800 years ago",
+                    "8000 years ago",
+                    "80000 years ago",
+                    "8000 years ago",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("The first people to live on the banks of the Nile were hunters and fishermen, who settled there over 8,000 years ago.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
+                    "What is the percentage of Muslim Egyptians?",
+                    "7%",
+                    "90%",
+                    "2%",
+                    "50%",
+                    "90%",
                     R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+            tipsArray.add("About 90 percent of Egyptians are Muslim, which means they are followers of the Islam religion.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
+                    "Who invaded Egypt in 1880s?",
+                    "British",
+                    "Portugal",
+                    "Germany",
+                    "Italy",
+                    "British",
                     R.drawable.whale));
-            tipsArray.add("Whale Shark");
+            tipsArray.add("In 1882, the British invaded and occupied Egypt.");
         }
         else if (skill.equals("history") && tree == 1 && stage == 4)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
+                    "In which year did World War I start?",
+                    "1912",
+                    "1913",
+                    "1914",
+                    "1924",
+                    "1914",
                     R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+            tipsArray.add("World War I, also known as the Great War, began in 1914 after the assassination of Archduke Franz Ferdinand of Austria");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
+                    "How many years did World War I last for?",
                     "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
+                    "2",
+                    "3",
+                    "4",
+                    "4",
                     R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+            tipsArray.add("World War I lasted exactly four years, three months and 14 days, which began on 28th July 1914 and lasted until 11th November 1918.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
+                    "How many country took part in World War I?",
+                    "135",
+                    "13",
+                    "5",
+                    "15",
+                    "135",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("135 countries took part in World War I, and more than 15 million people died.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
+                    "In which year did World War II start?",
+                    "1938",
+                    "1939",
+                    "1940",
+                    "1941",
+                    "1939",
                     R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+            tipsArray.add("World War II, also called Second World War, conflict that involved virtually every part of the world during the years 1939–45.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
+                    "Which country remained ‘neutral’ in World War II?",
+                    "Italy",
+                    "Russia",
+                    "Spain",
+                    "Germany",
+                    "Spain",
                     R.drawable.whale));
-            tipsArray.add("Whale Shark");
+            tipsArray.add("Some countries remained ‘neutral’ in World War 2. Such countries were Spain, Sweden and Switzerland – who chose not to join either side.");
         }
         else if (skill.equals("history") && tree == 1 && stage == 5)
         {
             questionsArray.add(new Question(
-                    "What is the percentage of salt water on Earth?",
-                    "1%",
-                    "50%",
-                    "72%",
-                    "27%",
-                    "72%",
+                    "What did Chai Lun invented?",
+                    "Method of housemaking",
+                    "Method of war tactic",
+                    "Method of moneymaking",
+                    "Method of papermaking",
+                    "Method of papermaking",
                     R.drawable.ic_earth));
-            tipsArray.add("With over 72% of the Earth’s surface covered by salt water, the Earth’s oceans are home to 230,000 known species.");
+            tipsArray.add("The Han dynasty Chinese court official Cai Lun (c. 50–121 CE) is credited as the inventor of a method of papermaking.");
 
             questionsArray.add(new Question(
-                    "How many years has been Jellyfish existed?",
-                    "1 year",
-                    "200 year",
-                    "650 year",
-                    "650 million year",
-                    "650 million year",
+                    "Who invented the modern car?",
+                    "Karl Benz",
+                    "Karl Malone",
+                    "Jordan Benz",
+                    "Jordan Malone",
+                    "Karl Benz",
                     R.drawable.ic_jellyfish));
-            tipsArray.add("650 million year");
+            tipsArray.add("The year 1886 is regarded as the birth year of the modern car when German inventor Karl Benz patented his Benz Patent-Motorwagen.");
 
             questionsArray.add(new Question(
-                    "What is the color of octopus's blood?",
-                    "Blue",
-                    "Red",
-                    "Yellow",
-                    "Black",
-                    "Blue",
+                    "In which year the first powered aircraft was invented?",
+                    "1903",
+                    "1904",
+                    "1905",
+                    "1906",
+                    "1903",
                     R.drawable.ic_octopus));
-            tipsArray.add("Blue");
+            tipsArray.add("On December 17, 1903, Wilbur and Orville Wright made four brief flights at Kitty Hawk with their first powered aircraft.");
 
             questionsArray.add(new Question(
-                    "How does dolphin stay away from threats when sleeping?",
-                    "Does not sleep",
-                    "Sleep with half of brain",
-                    "Look for Shelter",
-                    "Protected by human",
-                    "Sleep with half of brain",
+                    "What did James Naismith invented?",
+                    "Tennis",
+                    "Table Tennis",
+                    "Football",
+                    "Basketball",
+                    "Basketball",
                     R.drawable.ic_dolphin));
-            tipsArray.add("Sleep with half of brain");
+            tipsArray.add("The history of basketball began with its invention in 1891 in Springfield, Massachusetts by Canadian physical education instructor James Naismith.");
 
             questionsArray.add(new Question(
-                    "What is the largest fish in ocean?",
-                    "Whale Shark",
-                    "Blue Whale",
-                    "Gold Fish",
-                    "Protected by human",
-                    "Whale Shark",
+                    "What invented the first smartphone?",
+                    "Samsung",
+                    "Intel",
+                    "IBM",
+                    "Apple",
+                    "IBM",
                     R.drawable.whale));
-            tipsArray.add("Whale Shark");
+            tipsArray.add("The tech company IBM is widely credited with developing the world's first smartphone – the bulky but rather cutely named Simon.");
         }
         else if (skill.equals("history") && tree == 2 && stage == 1)
         {

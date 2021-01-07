@@ -84,7 +84,7 @@ public class ScoreFragment extends Fragment {
         pbMastery.setProgress(numOfCorrectAns*20);
         pbExp = view.findViewById(R.id.pbExpAdd);
         pbExp.setMax(totalQuestion*20);
-        pbExp.setMax(numOfCorrectAns*20);
+        pbExp.setProgress(numOfCorrectAns*20);
 
         textView = view.findViewById(R.id.tvCorrectAnswer);
         textView.setText(numOfCorrectAns + "/" + totalQuestion);
